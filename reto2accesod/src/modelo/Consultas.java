@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class Consultas {
 
@@ -62,7 +63,7 @@ public class Consultas {
 	 }
 	 
 	 //METER POR PARAMETRO EL OBJETO DE Empleado
-	 public void insertarEmpleados(Empleado emple) {
+	 public void insertarEmpleados(ArrayList<Empleado> emple) {
 
 			PreparedStatement stmt = null;
 			ResultSet result = null;
@@ -80,20 +81,20 @@ public class Consultas {
 			    stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
 			    // añadimos los valores a insertar
 
+			    for (int i = 0; i < emple.size(); ++i) {					    
+				    stmt.setInt(1, emple.get(i).getId());
+				    stmt.setString(2,emple.get(i).getNombre());
+				    stmt.setString(3, emple.get(i).getApellido());
+				    stmt.setInt(4, emple.get(i).getSueldo());
+				    stmt.setInt(5, emple.get(i).getBoss());
+				    stmt.setInt(6, emple.get(i).getCod_dept());
+				    stmt.setBoolean(7, emple.get(i).getJefe());
+				    stmt.setString(8, emple.get(i).getPuesto());
+			    }
 			    
-			    stmt.setInt(1, emple.getId());
-			    stmt.setString(2, emple.getNombre());
-			    stmt.setString(3, emple.getApellido());
-			    stmt.setInt(4, emple.getSueldo());
-			    stmt.setInt(5, emple.getBoss());
-			    stmt.setInt(6, emple.getCod_dept());
-			    stmt.setBoolean(7, emple.getJefe());
-			    stmt.setString(8, emple.getPuesto());
-			    
-			    
-
-			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			    stmt.executeUpdate();
+			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
+			   
 
 			} catch (SQLException e) {
 			    e.printStackTrace();

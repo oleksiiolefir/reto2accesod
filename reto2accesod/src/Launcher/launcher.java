@@ -2,6 +2,7 @@ package Launcher;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import modelo.Conexion;
 import modelo.Consultas;
@@ -20,16 +21,17 @@ public class launcher {
 		
 		lecturaCSV.funcionesDeLectorCsv(archivoCsv);
 		
-		String [] datos1 = modelo.lectorTXT.lecturaTXT();
+		ArrayList<Empleado> empleados = new ArrayList<Empleado>();
+		empleados = modelo.lectorTXT.lecturaTXT();
 
-		for (int i = 0; i < datos1.length; ++i) {
-		    System.out.println(datos1[i]);
+		for (int i = 0; i < empleados.size(); ++i) {
+		    System.out.println(empleados.get(i).getNombre());
 		}
 		
 	
 		
 		
-		//consult.insertarEmpleados();
+		consult.insertarEmpleados(empleados);
 
 	}
 

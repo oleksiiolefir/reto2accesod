@@ -1,64 +1,81 @@
 package modelo;
 
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
+import modelo.Conexion;
+
+
+
+import java.sql.*;
+
+import java.sql.PreparedStatement;
 
 public class lecturaCSV {
-	public static final String SEPARATOR=";";
-	public static final String QUOTE="[";
+	public static Connection Conexión;
+
 	
-	public static String[] funcionesDeLectorCsv(String archivo)  throws IOException 
+	public static final String SEPARATOR=";";
+	public static final String QUOTE="\"";
+	public static void funcionesDeLectorCsv(String archivo)  throws IOException, ClassNotFoundException, SQLException 
 	{
-		String [] fields = null;
+		String csvFile = "ArchivoCSV.csv";
 		BufferedReader br = null;
-		String [] datos ={" "," "," "};
-		try 
-		{     
-			br =new BufferedReader(new FileReader(archivo));
-			String line = br.readLine();
-			
-			while (null!=line) 
-			{
-				System.out.println("AAAAAA");
-				for (int i=0;i<5;i++) {
-					System.out.println("AAAAAA");
-					fields = line.split(SEPARATOR);
-					System.out.println(fields[i]);
-					System.out.println("AAAAAA");
-					datos[i] = fields[i];
-					System.out.println("BBBB");
-					
-					System.out.println("EL Array datos es "+ datos[i]);
-
-					line = br.readLine();
-
-				}				
-				
-			}
-   
-		}
-		catch (Exception e)
-		{
-			//Insercción excepción correspondiente
-		}
-		finally
-		{
-			if (null!=br) {
-          br.close();
-			}
-		}
+		String line = "";
+		//Se define separador ","
+		String cvsSplitBy = ";";{
 		
-		return datos;
+		try {
+		    br = new BufferedReader(new FileReader(csvFile));
+		    while ((line = br.readLine()) != null) {                
+		        String[] datos = line.split(cvsSplitBy);
+		        
+		     
+		        //Imprime datos.
+		        
+		     
+		        
+		        System.out.println(datos[0] + ", " + datos[1] + ", " + datos[2] );
+		        int Nombre = Integer.parseInt(datos[0]);
+		          String Marca = datos[1];
+		          String k = datos[2];
+		         
+		       
+		          
+		     
+		 
+		 
+			    String query = "INSERT INTO departamento (COD_DEPT,	LUGAR,	DNOMBRE) values ('"+Nombre+"','"+Marca+"','"+k+"')";
+			    try {
+			    	
+			    	
+			    	Conexion c =  new Conexion();
+				  	Connection cin = c.conectar();
+				 // dbConnection = getDBConnection();
+				  	
+				  	 PreparedStatement preparedStatement = null;
 
-	}
-	public static void pasarChar(String[] datos) {
-		for(int i = 0; i<datos.length;i++) {
-			System.out.println("Se muestran letras " +datos[i] );
-		}
+		          
+		            preparedStatement = cin.prepareStatement(query);
+
+		           
+		            // execute insert SQL stetement
+		            preparedStatement.executeUpdate();
+
+		            System.out.println("Record is inserted into DBUSER table!");
+			    
+		           
+
+		        } catch (SQLException e) {
+
+		            System.out.println(e.getMessage());
+
+		        } finally {
+		    if (br != null) {
+		    }
+		}}
+		    }finally { br.close();}}
+		
+		} 
 	}
 	 
-	
-}

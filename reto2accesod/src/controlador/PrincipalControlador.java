@@ -1,6 +1,5 @@
 package controlador;
 
-import modelo;
 import modelo.Conexion;
 import modelo.PrincipalModelo;
 import vista.JframePrincipal;

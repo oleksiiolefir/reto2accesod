@@ -1,4 +1,4 @@
 host: localhost
-bd: reto2
+bd: reto2ad
 usuario: grupo2
 contrasena: grupo2

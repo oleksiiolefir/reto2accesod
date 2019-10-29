@@ -9,6 +9,7 @@ public class bienvenida extends JPanel {
 	
 
 	private JPanel jpanel;
+	public JButton btnBienvenida;
 
 	/**
 	 * Launch the application.

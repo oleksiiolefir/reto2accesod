@@ -64,6 +64,9 @@ public class Consultas {
 	 
 	 //METER POR PARAMETRO EL OBJETO DE Empleado
 	
+	 public void insertarDepartamentos2() {
+		 
+	 }
 	
 	public void insertarEmpleados(ArrayList<Empleado> emple) throws SQLException {
 		  for (int i = 0; i < emple.size(); ++i) {					    

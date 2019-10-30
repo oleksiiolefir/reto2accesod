@@ -1,8 +1,11 @@
 package modelo;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import modelo.Conexion;
 
@@ -20,15 +23,18 @@ public class lecturaCSV {
 	public static final String QUOTE="\"";
 	public static void funcionesDeLectorCsv(String archivo)  throws IOException, ClassNotFoundException, SQLException 
 	{
-		String csvFile = "C:\\workspace\\reto2accesod\\reto2accesod\\ArchivoCSV.csv";
+		
+		String csvFile ="ficheros"+ File.separator+"ArchivoCSV.csv";
 		BufferedReader br = null;
 		String line = "";
 		//Se define separador ","
 		String cvsSplitBy = ";";{
-		
+		ArrayList<Departamento>deptlist = new ArrayList<>();
+		Departamento dept = new Departamento();
 		try {
 		    br = new BufferedReader(new FileReader(csvFile));
-		    while ((line = br.readLine()) != null) {                
+		    while ((line = br.readLine()) != null) {          
+		    	int i = 0;
 		        String[] datos = line.split(cvsSplitBy);
 		        
 		     
@@ -37,16 +43,17 @@ public class lecturaCSV {
 		     
 		        
 		        System.out.println(datos[0] + ", " + datos[1] + ", " + datos[2] );
-		        int Nombre = Integer.parseInt(datos[0]);
+		       /* int Nombre = Integer.parseInt(datos[0]);
 		          String Marca = datos[1];
 		          String k = datos[2];
-		         
+		         */
+		        dept.setCod_dept(Integer.parseInt(datos[0]));
+		        dept.setLugar(datos[1]);
+		        dept.setDnombre(datos[2]);
+		       deptlist.add(dept);
 		       
-		          
-		     
 		 
-		 
-			    String query = "INSERT INTO departamento (COD_DEPT,	LUGAR,	DNOMBRE) values ('"+Nombre+"','"+Marca+"','"+k+"')";
+			    String query = "INSERT INTO departamento (COD_DEPT,	LUGAR,	DNOMBRE) values ('"+deptlist.get(i).getCod_dept()+"','"+deptlist.get(i).getLugar()+"','"+deptlist.get(i).getDnombre()+"')";
 			    try {
 			    	
 			    	
@@ -72,9 +79,12 @@ public class lecturaCSV {
 		            System.out.println(e.getMessage());
 
 		        } finally {
-		    if (br != null) {
-		    }
-		}}
+		        	if (br != null) {
+		    	}
+		        }
+			    i++;
+			}
+		    
 		    }finally { }}
 		
 		} 

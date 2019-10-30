@@ -3,6 +3,7 @@ package modelo;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import modelo.Conexion;
 
 
@@ -19,7 +20,7 @@ public class lecturaCSV {
 	public static final String QUOTE="\"";
 	public static void funcionesDeLectorCsv(String archivo)  throws IOException, ClassNotFoundException, SQLException 
 	{
-		String csvFile = "ArchivoCSV.csv";
+		String csvFile = "C:\\workspace\\reto2accesod\\reto2accesod\\ArchivoCSV.csv";
 		BufferedReader br = null;
 		String line = "";
 		//Se define separador ","
@@ -74,7 +75,7 @@ public class lecturaCSV {
 		    if (br != null) {
 		    }
 		}}
-		    }finally { br.close();}}
+		    }finally { }}
 		
 		} 
 	}

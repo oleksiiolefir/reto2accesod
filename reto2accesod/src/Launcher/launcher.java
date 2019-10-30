@@ -24,9 +24,7 @@ public class launcher {
 		ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 		empleados = modelo.lectorTXT.lecturaTXT();
 
-		for (int i = 0; i < empleados.size(); ++i) {
-		    System.out.println(empleados.get(i).getNombre());
-		}
+		
 		
 	
 		

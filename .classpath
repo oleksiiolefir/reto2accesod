@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="reto2accesod/src"/>
+	<classpathentry kind="lib" path="reto2accesod/lib/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="output" path="reto2accesod/bin"/>
+</classpath>

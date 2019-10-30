@@ -16,7 +16,7 @@ public class lectorTXT {
         int cont=0;
         
         // Cargamos el buffer con el contenido del archivo
-        BufferedReader br = new BufferedReader (new FileReader ("C:\\workspace\\reto2accesod\\reto2accesod\\datos.txt"));
+        BufferedReader br = new BufferedReader (new FileReader ("datos.txt"));
  
         // s1 será la primera línea
         s1 = br.readLine(); 

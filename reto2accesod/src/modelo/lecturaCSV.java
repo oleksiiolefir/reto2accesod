@@ -20,7 +20,7 @@ public class lecturaCSV {
 	public static final String QUOTE="\"";
 	public static void funcionesDeLectorCsv(String archivo)  throws IOException, ClassNotFoundException, SQLException 
 	{
-		String csvFile = "C:\\workspace\\reto2accesod\\reto2accesod\\ArchivoCSV.csv";
+		String csvFile = "\\ArchivoCSV.csv";
 		BufferedReader br = null;
 		String line = "";
 		//Se define separador ","

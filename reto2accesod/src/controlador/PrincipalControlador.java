@@ -11,6 +11,7 @@ public class PrincipalControlador {
     
     private controladorJframe controladorJframe;
     public controladorBienvenida controladorBienvenida;
+    public controladorCrearUsuario controladorCrearUsuario;
     
 
     
@@ -45,6 +46,7 @@ public class PrincipalControlador {
     	this.controladorBienvenida = new controladorBienvenida(vista, controladorJframe);
     	this.controladorBienvenida.addListeners();
     	
-   
+    	this.controladorCrearUsuario = new controladorCrearUsuario(vista, controladorJframe);
+    	this.controladorBienvenida.addListeners();
     }
 }

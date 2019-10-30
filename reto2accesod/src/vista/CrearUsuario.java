@@ -3,94 +3,98 @@ package vista;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.JButton;
 
 public class CrearUsuario extends JPanel {
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-
+	private JTextField textCodEmple, textNombre, textApellido, textSueldo, textDept, textCargo, textConCargo, textJefe;
+	private JLabel lbCodEmple, lbNombre, lbApellido, lbSueldo, lbDept, lbCargo, lbConCargo, lbJefe;
+	public JButton btnAgregar, btnPrueba;
+	
 	/**
 	 * Create the panel.
 	 */
 	public CrearUsuario() {
 		setLayout(null);
 		
-		JLabel label = new JLabel("Codigo de empleado: ");
-		label.setBounds(25, 30, 137, 19);
-		add(label);
+		lbCodEmple = new JLabel("Codigo de empleado: ");
+		lbCodEmple.setBounds(25, 30, 137, 19);
+		add(lbCodEmple);
 		
-		JLabel label_1 = new JLabel("Nombre: ");
-		label_1.setBounds(25, 60, 137, 19);
-		add(label_1);
+		lbNombre = new JLabel("Nombre: ");
+		lbNombre.setBounds(25, 60, 137, 19);
+		add(lbNombre);
 		
-		JLabel label_2 = new JLabel("Primer apellido: ");
-		label_2.setBounds(25, 90, 137, 19);
-		add(label_2);
+		lbApellido = new JLabel("Primer apellido: ");
+		lbApellido.setBounds(25, 90, 137, 19);
+		add(lbApellido);
 		
-		JLabel label_3 = new JLabel("Sueldo: ");
-		label_3.setBounds(25, 120, 137, 19);
-		add(label_3);
+		lbSueldo = new JLabel("Sueldo: ");
+		lbSueldo.setBounds(25, 120, 137, 19);
+		add(lbSueldo);
 		
-		JLabel label_4 = new JLabel("Departamento del empleado: ");
-		label_4.setBounds(25, 150, 153, 19);
-		add(label_4);
+		lbDept = new JLabel("Departamento del empleado: ");
+		lbDept.setBounds(25, 150, 153, 19);
+		add(lbDept);
 		
-		JLabel label_5 = new JLabel("Cargo del empleado: ");
-		label_5.setBounds(25, 180, 137, 19);
-		add(label_5);
+		lbCargo = new JLabel("Cargo del empleado: ");
+		lbCargo.setBounds(25, 180, 137, 19);
+		add(lbCargo);
 		
-		JLabel label_6 = new JLabel("\u00BFTiene a alguien a cargo? (Si/No)");
-		label_6.setBounds(25, 210, 164, 19);
-		add(label_6);
+		lbConCargo = new JLabel("\u00BFTiene a alguien a cargo? (Si/No)");
+		lbConCargo.setBounds(25, 210, 164, 19);
+		add(lbConCargo);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(260, 29, 120, 19);
-		add(textField);
+		lbJefe = new JLabel("Jefe asignado: ");
+		lbJefe.setBounds(25, 241, 164, 19);
+		add(lbJefe);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(260, 59, 120, 19);
-		add(textField_1);
+		textCodEmple = new JTextField();
+		textCodEmple.setColumns(10);
+		textCodEmple.setBounds(260, 29, 120, 19);
+		add(textCodEmple);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(260, 89, 120, 19);
-		add(textField_2);
+		textNombre = new JTextField();
+		textNombre.setColumns(10);
+		textNombre.setBounds(260, 59, 120, 19);
+		add(textNombre);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(260, 119, 120, 19);
-		add(textField_3);
+		textApellido = new JTextField();
+		textApellido.setColumns(10);
+		textApellido.setBounds(260, 89, 120, 19);
+		add(textApellido);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(260, 149, 120, 19);
-		add(textField_4);
+		textSueldo = new JTextField();
+		textSueldo.setColumns(10);
+		textSueldo.setBounds(260, 119, 120, 19);
+		add(textSueldo);
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(260, 179, 120, 19);
-		add(textField_5);
+		textDept = new JTextField();
+		textDept.setColumns(10);
+		textDept.setBounds(260, 149, 120, 19);
+		add(textDept);
 		
-		textField_6 = new JTextField();
-		textField_6.setColumns(10);
-		textField_6.setBounds(260, 209, 120, 19);
-		add(textField_6);
+		textCargo = new JTextField();
+		textCargo.setColumns(10);
+		textCargo.setBounds(260, 179, 120, 19);
+		add(textCargo);
 		
-		JLabel label_7 = new JLabel("Jefe asignado: ");
-		label_7.setBounds(25, 241, 164, 19);
-		add(label_7);
+		textConCargo = new JTextField();
+		textConCargo.setColumns(10);
+		textConCargo.setBounds(260, 209, 120, 19);
+		add(textConCargo);
 		
-		textField_7 = new JTextField();
-		textField_7.setColumns(10);
-		textField_7.setBounds(260, 240, 120, 19);
-		add(textField_7);
+		textJefe = new JTextField();
+		textJefe.setColumns(10);
+		textJefe.setBounds(260, 240, 120, 19);
+		add(textJefe);
+		
+		btnAgregar = new JButton("GUARDAR");
+		btnAgregar.setBounds(351, 270, 89, 23);
+		add(btnAgregar);
+		
+		btnPrueba = new JButton("prueba");
+		btnPrueba.setBounds(35, 271, 89, 23);
+		add(btnPrueba);
 
 	}
 }

@@ -18,55 +18,37 @@ public class Consultas {
 	    this.connection = null;
 	 }
 	 //METER POR PARAMETRO EL OBJETO DE DEPARTAMENTOS
-	 public void insertarDepartamentos() {
-
-			PreparedStatement stmt = null;
-			ResultSet result = null;
-			int codReserva = 0;
-			String query;
-			int cod_dept = 10;
-			String lugar = "Erreka";
-			String Dnombre = "Infor";
-			query = "INSERT INTO departamento (Cod_Dept, Lugar, Dnombre) VALUES (?, ?, ?)";
-
+	 public void insertarDepartamentos(ArrayList<Departamento> deptlist) throws SQLException {
+		 for (int i = 0; i < deptlist.size(); ++i) {
+		 PreparedStatement stmt = null;
+		 String query;
+		  query = "INSERT INTO departamento (COD_DEPT,	LUGAR,	DNOMBRE) values ('"+deptlist.get(i).getCod_dept()+"','"+deptlist.get(i).getLugar()+"','"+deptlist.get(i).getDnombre()+"')";
 			try {
-
 			    // abrimos una conexion
 			    connection = conexion.conectar();
-
-			    // preparamos la consulta INSERT
-			    stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-			    //Cod dept, lugar,dnombre
-			 // ID,Nomrbe,apellidos,sueldo,boss(id empleado),cod_dept,jefe(si/no),puesto
+			    stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);	 
 			    // añadimos los valores a insertar
-	//stmt.setInt(1, departamento.getCod_dept());
-	//stmt.setInt(2, departamento.getLugar());	
-	//stmt.setInt(3, departamento.getDnombre());
-			    
-			    stmt.setInt(1, cod_dept);
-			    stmt.setString(2, lugar);
-			    stmt.setString(3, Dnombre);
-			
-
-			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			    stmt.executeUpdate();
-
+			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			} catch (SQLException e) {
 			    e.printStackTrace();
-			} finally {
+			} 
+			finally {
 			    try {
-				connection.close();
-			    } catch (Exception e) {
+			    	
+			    } 
+			    catch (Exception e) {
 				e.printStackTrace();
 			    }
 			}
+			 
+		  }
+		 connection.close();
 	 }
+
+	 
 	 
 	 //METER POR PARAMETRO EL OBJETO DE Empleado
-	
-	 public void insertarDepartamentos2() {
-		 
-	 }
 	
 	public void insertarEmpleados(ArrayList<Empleado> emple) throws SQLException {
 		  for (int i = 0; i < emple.size(); ++i) {					    

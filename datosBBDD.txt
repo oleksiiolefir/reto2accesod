@@ -1,4 +1,0 @@
-host: capul
-bd: reto2
-usuario: grupo2
-contrasena: grupo2

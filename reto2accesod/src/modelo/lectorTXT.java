@@ -32,6 +32,7 @@ public class lectorTXT {
 	             
 	             while (st.hasMoreTokens())
 	             {
+	            	 
 	                 s2 = st.nextToken(";");
 	                 numTokens++;
 	                 switch (numTokens) {

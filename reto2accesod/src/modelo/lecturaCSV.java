@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import modelo.Conexion;
-
+import modelo.Departamento;
 
 
 import java.sql.*;
@@ -21,72 +21,42 @@ public class lecturaCSV {
 	
 	public static final String SEPARATOR=";";
 	public static final String QUOTE="\"";
-	public static void funcionesDeLectorCsv(String archivo)  throws IOException, ClassNotFoundException, SQLException 
+	public static ArrayList<Departamento> funcionesDeLectorCsv(String archivo)  throws IOException, ClassNotFoundException, SQLException 
 	{
-		
+	
+		int i = 0;
 		String csvFile ="ficheros"+ File.separator+"ArchivoCSV.csv";
 		BufferedReader br = null;
 		String line = "";
 		//Se define separador ","
-		String cvsSplitBy = ";";{
+		
 		ArrayList<Departamento>deptlist = new ArrayList<>();
-		Departamento dept = new Departamento();
-		try {
+		
+		String cvsSplitBy = ";";
+		
+		
 		    br = new BufferedReader(new FileReader(csvFile));
 		    while ((line = br.readLine()) != null) {          
-		    	int i = 0;
+		    	Departamento dept = new Departamento();
 		        String[] datos = line.split(cvsSplitBy);
-		        
-		     
-		        //Imprime datos.
-		        
-		     
-		        
+		       
 		        System.out.println(datos[0] + ", " + datos[1] + ", " + datos[2] );
-		       /* int Nombre = Integer.parseInt(datos[0]);
-		          String Marca = datos[1];
-		          String k = datos[2];
-		         */
+		    
 		        dept.setCod_dept(Integer.parseInt(datos[0]));
 		        dept.setLugar(datos[1]);
 		        dept.setDnombre(datos[2]);
-		       deptlist.add(dept);
 		       
-		 
-			    String query = "INSERT INTO departamento (COD_DEPT,	LUGAR,	DNOMBRE) values ('"+deptlist.get(i).getCod_dept()+"','"+deptlist.get(i).getLugar()+"','"+deptlist.get(i).getDnombre()+"')";
-			    try {
-			    	
-			    	
-			    	Conexion c =  new Conexion();
-				  	Connection cin = c.conectar();
-				 // dbConnection = getDBConnection();
-				  	
-				  	 PreparedStatement preparedStatement = null;
-
-		          
-		            preparedStatement = cin.prepareStatement(query);
-
-		           
-		            // execute insert SQL stetement
-		            preparedStatement.executeUpdate();
-
-		            System.out.println("Record is inserted into DBUSER table!");
-			    
-		           
-
-		        } catch (SQLException e) {
-
-		            System.out.println(e.getMessage());
-
-		        } finally {
-		        	if (br != null) {
-		    	}
-		        }
-			    i++;
-			}
+		       deptlist.add(i,dept);
 		    
-		    }finally { }}
+		       System.out.println("la i es " +i);
+		       System.out.println("aaa :"+deptlist.get(i).getCod_dept()+deptlist.get(i).getDnombre()+deptlist.get(i).getLugar());
+		       i++;
+		      
+		       
+		     
+		    }
 		
-		} 
-	}
+		return deptlist;
+	} 
+}
 	 

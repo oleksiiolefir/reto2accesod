@@ -22,15 +22,9 @@ public class launcher {
 		lecturaCSV.funcionesDeLectorCsv(archivoCsv);
 		
 		ArrayList<Empleado> empleados = new ArrayList<Empleado>();
-		empleados = modelo.lectorTXT.lecturaTXT();
-
-		
-		
-	
-		
+		empleados = modelo.lectorTXT.lecturaTXT();	
 		
 		consult.insertarEmpleados(empleados);
-
 	}
 
 }

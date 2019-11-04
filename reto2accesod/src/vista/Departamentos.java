@@ -9,8 +9,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.*;
 
-public class Departamentos extends JPanel {
+public class Departamentos extends JPanel  implements ActionListener {
 
 	/**
 	 * Create the panel.
@@ -27,22 +28,9 @@ public class Departamentos extends JPanel {
 		add(btnNewButton_1);
 
 	}
-	public class Boton extends JFrame implements ActionListener {
-		JButton boton;
-		JLabel texto;
-		public Boton() {
-		setLayout(null);
-		boton=new JButton("SALIR");
-		boton.setBounds(100,150,100,30);
-		boton.addActionListener((ActionListener) this);
-		add(boton);
-		texto=new JLabel("Presione el botón para salir.");
-		texto.setBounds(50,50,220,40);
-		add(texto);
-		}
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-}}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}}

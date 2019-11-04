@@ -1,6 +1,7 @@
 package modelo;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,7 +17,9 @@ public class lectorTXT {
         int cont=0;
         
         // Cargamos el buffer con el contenido del archivo
-        BufferedReader br = new BufferedReader (new FileReader ("datos.txt"));
+
+        BufferedReader br = new BufferedReader (new FileReader ("ficheros"+ File.separator+"datos.txt"));
+
  
         // s1 será la primera línea
         s1 = br.readLine(); 
@@ -31,6 +34,7 @@ public class lectorTXT {
 	             
 	             while (st.hasMoreTokens())
 	             {
+	            	 
 	                 s2 = st.nextToken(";");
 	                 numTokens++;
 	                 switch (numTokens) {

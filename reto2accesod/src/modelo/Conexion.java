@@ -1,6 +1,7 @@
 package modelo;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -54,7 +55,7 @@ public class Conexion {
 	
 	public String[] getConnectionInfo() {
 
-		String filePath = "datosBBDD.txt";
+		String filePath = "ficheros"+ File.separator+"datosBBDD.txt";
 		FileReader fileReader = null;
 		BufferedReader buffer = null;
 		String[] datos = new String[4];

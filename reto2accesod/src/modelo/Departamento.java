@@ -4,7 +4,9 @@ public class Departamento {
 	private int cod_dept;
 	private String lugar;
 	private String dnombre;
-	
+	public Departamento() {
+		
+	}
 	public Departamento(int cod_dept, String lugar, String dnombre) {		
 		super();
 		this.cod_dept = cod_dept;

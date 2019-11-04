@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JButton;
 
 public class CrearDepartamentos extends JPanel{
 	
@@ -45,6 +46,10 @@ public CrearDepartamentos() {
 	textField_2.setColumns(10);
 	textField_2.setBounds(260, 89, 120, 19);
 	add(textField_2);
+	
+	JButton btnCrear = new JButton("Crear");
+	btnCrear.setBounds(25, 135, 89, 23);
+	add(btnCrear);
 
 }
 }

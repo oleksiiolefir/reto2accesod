@@ -19,6 +19,8 @@ public class JframePrincipal extends JFrame {
 	public bienvenida bienvenida;
 	public CrearUsuario crearUsuario;
 	public Menu menu;
+	public MenuEmple menuEmple;
+	
 	//constructor
 	public JframePrincipal() {
 		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -34,7 +36,7 @@ public class JframePrincipal extends JFrame {
 		bienvenida = new bienvenida();
 		menu = new Menu();
 		crearUsuario = new CrearUsuario();
-	 
+		menuEmple = new MenuEmple();	 
 
 	}
 	
@@ -42,6 +44,7 @@ public class JframePrincipal extends JFrame {
 		getContentPane().add(bienvenida);
 		getContentPane().add(menu);
 		getContentPane().add(crearUsuario);
+		getContentPane().add(menuEmple);
 		
 	}
 }

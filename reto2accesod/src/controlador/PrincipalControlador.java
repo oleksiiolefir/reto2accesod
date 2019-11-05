@@ -12,7 +12,7 @@ public class PrincipalControlador {
     private controladorJframe controladorJframe;
     public controladorBienvenida controladorBienvenida;
     public controladorCrearUsuario controladorCrearUsuario;
-    
+    public controladorMenuEmple controladorMenuEmple;   
 
     
     /**
@@ -46,7 +46,12 @@ public class PrincipalControlador {
     	this.controladorBienvenida = new controladorBienvenida(vista, controladorJframe);
     	this.controladorBienvenida.addListeners();
     	
+    	// añadimos listeners a los botones del panel CrearUsuario
     	this.controladorCrearUsuario = new controladorCrearUsuario(vista, controladorJframe);
     	this.controladorBienvenida.addListeners();
+    	
+    	// añadimos listeners a los botones del panel MenuEmple
+    	this.controladorMenuEmple = new controladorMenuEmple(vista, controladorJframe);
+    	this.controladorMenuEmple.addListeners();
     }
 }

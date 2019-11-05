@@ -13,7 +13,7 @@ public class PrincipalControlador {
     private controladorJframe controladorJframe;
     private controladorBienvenida controladorBienvenida;
     public controladorCrearUsuario controladorCrearUsuario;
-    
+    public controladorMenuEmple controladorMenuEmple;   
 
     
     /**
@@ -32,9 +32,12 @@ public class PrincipalControlador {
 	 */
     public void inicializarVista() {
     	vista.setVisible(true);
-    	vista.bienvenida.setVisible(false);
-    	vista.menu.setVisible(true);
+    	vista.bienvenida.setVisible(true);
     	vista.crearUsuario.setVisible(false);
+    	vista.menu.setVisible(false);
+    	vista.menuEmple.setVisible(false);
+    	
+   
     }
     /**
 	 * Esta funcion de encarga de inicializar los botones
@@ -48,7 +51,13 @@ public class PrincipalControlador {
     	this.controladorBienvenida = new controladorBienvenida(vista,controlador);
     	this.controladorBienvenida.addListeners();
     	
+    	// añadimos listeners a los botones del panel CrearUsuario
     	this.controladorCrearUsuario = new controladorCrearUsuario(vista, controladorJframe);
     	this.controladorCrearUsuario.addListeners();
+
+    	// añadimos listeners a los botones del panel MenuEmple
+    	this.controladorMenuEmple = new controladorMenuEmple(vista, controladorJframe);
+    	this.controladorMenuEmple.addListeners();
+
     }
 }

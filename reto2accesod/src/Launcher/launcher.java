@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import controlador.PrincipalControlador;
 import modelo.Conexion;
 import modelo.Consultas;
 import modelo.Empleado;
@@ -22,10 +23,9 @@ public class launcher {
 		JframePrincipal vista = new JframePrincipal();
 		PrincipalModelo modelo = new PrincipalModelo();
 		PrincipalControlador controlador = new PrincipalControlador(modelo, vista);
-		
 		controlador.inicializarVista();
 		controlador.inicializarListeners(); 
-		
+
 		Conexion c = new Conexion();
 
 		c.conectar();
@@ -33,14 +33,18 @@ public class launcher {
 		Consultas consult = new Consultas(c);
 		
 		
+
 		departamentos=lecturaCSV.funcionesDeLectorCsv();
+
 		empleados = lectorTXT.lecturaTXT();	
 		
 		
 		consult.insertarEmpleados(empleados);
 		consult.insertarDepartamentos(departamentos);
 		
-		
+
+		controlador.inicializarVista();
+		controlador.inicializarListeners();
 		
 		
 	}

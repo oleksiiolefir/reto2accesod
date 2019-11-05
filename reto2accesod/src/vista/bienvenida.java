@@ -6,8 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
-public class bienvenida extends JPanel {
-	
+public class bienvenida extends JPanel {	
 
 	public JPanel jpanel;
 	public JButton btnBienvenida;

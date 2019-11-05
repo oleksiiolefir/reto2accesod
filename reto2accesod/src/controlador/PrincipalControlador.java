@@ -2,6 +2,7 @@ package controlador;
 
 import modelo.Conexion;
 import modelo.PrincipalModelo;
+import vista.CrearDepartamentos;
 import vista.JframePrincipal;
 
 public class PrincipalControlador {
@@ -12,6 +13,9 @@ public class PrincipalControlador {
     private controladorJframe controladorJframe;
     public controladorBienvenida controladorBienvenida;
     public controladorCrearUsuario controladorCrearUsuario;
+	public controladorCrearDepartamentos controladorCrearDepartamentos;
+	public controladorDepartamentos controladorDepartamentos;
+	private controladorVerDepartamentos controladorVerDepartamentos;
     
 
     
@@ -48,5 +52,15 @@ public class PrincipalControlador {
     	
     	this.controladorCrearUsuario = new controladorCrearUsuario(vista, controladorJframe);
     	this.controladorBienvenida.addListeners();
+    	
+    	this.controladorCrearDepartamentos = new controladorCrearDepartamentos();
+    	this.controladorBienvenida.addListeners();
+    	
+    	this.controladorDepartamentos = new controladorDepartamentos();
+    	this.controladorBienvenida.addListeners();
+    	
+    	this.controladorVerDepartamentos = new controladorVerDepartamentos();
+    	this.controladorBienvenida.addListeners();
+    	
     }
 }

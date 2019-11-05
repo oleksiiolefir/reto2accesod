@@ -12,12 +12,12 @@ import javax.swing.JButton;
 import java.awt.event.*;
 import javax.swing.JScrollPane;
 
-public class verDepartamento extends JPanel  implements ActionListener {
+public class verDepartamentos extends JPanel  implements ActionListener {
 
 	/**
 	 * Create the panel.
 	 */
-	public verDepartamento() {
+	public verDepartamentos() {
 		setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();

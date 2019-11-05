@@ -10,9 +10,9 @@ import javax.swing.JButton;
 
 public class CrearDepartamentos extends JPanel{
 	
-	private JTextField textField;
-private JTextField textField_1;
-private JTextField textField_2;
+	private JTextField textField,textField_1 ,textField_2;
+
+public JButton btnCrear;
 
 /**
  * Create the panel.

@@ -32,6 +32,10 @@ public class PrincipalControlador {
     public void inicializarVista() {
     	vista.setVisible(true);
     	vista.bienvenida.setVisible(true);
+    	vista.crearUsuario.setVisible(false);
+    	vista.menu.setVisible(false);
+    	vista.menuEmple.setVisible(false);
+    	
    
     }
     /**
@@ -48,7 +52,7 @@ public class PrincipalControlador {
     	
     	// añadimos listeners a los botones del panel CrearUsuario
     	this.controladorCrearUsuario = new controladorCrearUsuario(vista, controladorJframe);
-    	this.controladorBienvenida.addListeners();
+    	this.controladorCrearUsuario.addListeners();
     	
     	// añadimos listeners a los botones del panel MenuEmple
     	this.controladorMenuEmple = new controladorMenuEmple(vista, controladorJframe);

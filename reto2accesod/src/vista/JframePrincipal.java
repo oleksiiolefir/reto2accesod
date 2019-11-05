@@ -37,14 +37,12 @@ public class JframePrincipal extends JFrame {
 		menu = new Menu();
 		crearUsuario = new CrearUsuario();
 		menuEmple = new MenuEmple();	 
-
 	}
 	
 	private void anadirPaneles() {
 		getContentPane().add(bienvenida);
 		getContentPane().add(menu);
 		getContentPane().add(crearUsuario);
-		getContentPane().add(menuEmple);
-		
+		getContentPane().add(menuEmple);		
 	}
 }

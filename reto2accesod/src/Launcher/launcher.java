@@ -4,10 +4,14 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import controlador.PrincipalControlador;
 import modelo.Conexion;
 import modelo.Consultas;
 import modelo.Empleado;
+import modelo.PrincipalModelo;
+import modelo.lectorTXT;
 import modelo.lecturaCSV;
+import vista.JframePrincipal;
 import modelo.Departamento;
 
 public class launcher {
@@ -16,6 +20,9 @@ public class launcher {
 	static ArrayList<Departamento> departamentos = new ArrayList<Departamento>();
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
+		JframePrincipal vista = new JframePrincipal();
+		PrincipalModelo modelo = new PrincipalModelo();
+		PrincipalControlador controlador = new PrincipalControlador(modelo, vista);
 		
 		Conexion c = new Conexion();
 
@@ -25,16 +32,16 @@ public class launcher {
 		
 		//lecturaCSV.funcionesDeLectorCsv(archivoCsv);
 		
-		departamentos=modelo.lecturaCSV.funcionesDeLectorCsv(archivoCsv);
-		/*for(int i=0;i<departamentos.size();i++) {
-			System.out.println("la i e s " +i);
-			System.out.println("aaa :"+departamentos.get(i).getCod_dept()+departamentos.get(i).getDnombre()+departamentos.get(i).getLugar());
-		}*/
-		empleados = modelo.lectorTXT.lecturaTXT();	
+		departamentos=lecturaCSV.funcionesDeLectorCsv(archivoCsv);
+		empleados = lectorTXT.lecturaTXT();	
 		
 		
-		//consult.insertarEmpleados(empleados);
+		consult.insertarEmpleados(empleados);
 		consult.insertarDepartamentos(departamentos);
+		
+		controlador.inicializarVista();
+		controlador.inicializarListeners();
+		
 		
 	}
 

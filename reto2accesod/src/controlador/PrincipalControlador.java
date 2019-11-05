@@ -31,10 +31,10 @@ public class PrincipalControlador {
 	 */
     public void inicializarVista() {
     	vista.setVisible(true);
-    	vista.bienvenida.setVisible(true);
+    	vista.bienvenida.setVisible(false);
     	vista.crearUsuario.setVisible(false);
     	vista.menu.setVisible(false);
-    	vista.menuEmple.setVisible(false);
+    	vista.menuEmple.setVisible(true);
     	
    
     }

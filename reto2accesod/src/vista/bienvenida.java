@@ -4,35 +4,25 @@ import java.awt.EventQueue;
 
 import javax.swing.JPanel;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 public class bienvenida extends JPanel {
 	
 
-	private JPanel jpanel;
+	public JPanel jpanel;
 	public JButton btnBienvenida;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					bienvenida window = new bienvenida();
-					window.jpanel.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	public JLabel lblAaaaa;
+	
 	public bienvenida() {
 		setLayout(null);
 		
-		JButton btnBienvenida = new JButton("BIENVENIDA");
+		btnBienvenida = new JButton("BIENVENIDA");
 		btnBienvenida.setBounds(163, 134, 111, 23);
 		add(btnBienvenida);
+		
+		lblAaaaa = new JLabel("AAAAA");
+		lblAaaaa.setBounds(163, 214, 46, 14);
+		add(lblAaaaa);
 	}	
 }
 	

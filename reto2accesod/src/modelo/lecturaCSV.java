@@ -21,7 +21,7 @@ public class lecturaCSV {
 	
 	public static final String SEPARATOR=";";
 	public static final String QUOTE="\"";
-	public static ArrayList<Departamento> funcionesDeLectorCsv(String archivo)  throws IOException, ClassNotFoundException, SQLException 
+	public static ArrayList<Departamento> funcionesDeLectorCsv()  throws IOException, ClassNotFoundException, SQLException 
 	{
 	
 		int i = 0;

@@ -13,10 +13,14 @@ public class PrincipalControlador {
     private controladorJframe controladorJframe;
     public controladorBienvenida controladorBienvenida;
     public controladorCrearUsuario controladorCrearUsuario;
+
 	public controladorCrearDepartamentos controladorCrearDepartamentos;
 	public controladorDepartamentos controladorDepartamentos;
 	private controladorVerDepartamentos controladorVerDepartamentos;
     
+
+    public controladorMenuEmple controladorMenuEmple;   
+
 
     
     /**
@@ -36,6 +40,10 @@ public class PrincipalControlador {
     public void inicializarVista() {
     	vista.setVisible(true);
     	vista.bienvenida.setVisible(true);
+    	vista.crearUsuario.setVisible(false);
+    	vista.menu.setVisible(false);
+    	vista.menuEmple.setVisible(false);
+    	
    
     }
     /**
@@ -50,7 +58,9 @@ public class PrincipalControlador {
     	this.controladorBienvenida = new controladorBienvenida(vista, controladorJframe);
     	this.controladorBienvenida.addListeners();
     	
+    	// añadimos listeners a los botones del panel CrearUsuario
     	this.controladorCrearUsuario = new controladorCrearUsuario(vista, controladorJframe);
+
     	this.controladorBienvenida.addListeners();
     	
     	this.controladorCrearDepartamentos = new controladorCrearDepartamentos();
@@ -62,5 +72,12 @@ public class PrincipalControlador {
     	this.controladorVerDepartamentos = new controladorVerDepartamentos();
     	this.controladorBienvenida.addListeners();
     	
+
+    	this.controladorCrearUsuario.addListeners();
+    	
+    	// añadimos listeners a los botones del panel MenuEmple
+    	this.controladorMenuEmple = new controladorMenuEmple(vista, controladorJframe);
+    	this.controladorMenuEmple.addListeners();
+
     }
 }

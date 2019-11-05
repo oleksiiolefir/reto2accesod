@@ -54,11 +54,7 @@ Object sourceObject = e.getSource();
 			}
 			
 		//JCOMBOBOX DE CIUDAD Y TIPO ALOJAMIENTO
-		} else if (sourceObject instanceof JComboBox) {
-			
-			actualizarFiltradoJComboBox(); //se actualiza el JTable del PanBuscarHotel con los datos seleccionados por el usuario
-			
-		}
+		} 
 	}
 
 }

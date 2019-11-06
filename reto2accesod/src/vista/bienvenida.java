@@ -10,22 +10,6 @@ public class bienvenida extends JPanel {
 	private JPanel jpanel;
 	public JButton btnBienvenida;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					bienvenida window = new bienvenida();
-					window.jpanel.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
 	public bienvenida() {
 		setLayout(null);
 		

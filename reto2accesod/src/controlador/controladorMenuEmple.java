@@ -36,7 +36,7 @@ public class controladorMenuEmple implements ActionListener{
 		   
 			// comprobamos que boton se ha pulsado y ejecutamos sus acciones
 			switch (botonPulsado) {
-				case "Crear Nuevo Usuario":	//Cuando pulsa el boton continuar pasan las siguientes cosas: 
+				case "Crear Nuevo Usuario":	//Cuando pulsa el boton Crear Nuevo Usuario pasan las siguientes cosas: 
 					vista.crearUsuario.setVisible(true);
 					vista.menuEmple.setVisible(false);
 					break;

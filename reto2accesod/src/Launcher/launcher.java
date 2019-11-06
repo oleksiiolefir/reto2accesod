@@ -36,7 +36,7 @@ public class launcher {
 		empleados = modelo.lectorTXT.lecturaTXT();	
 		*/
 
-		consult.insertarEmpleados(empleados);
+		//consult.insertarEmpleados(empleados);
 		
 		
 	}

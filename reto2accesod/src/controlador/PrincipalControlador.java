@@ -9,9 +9,10 @@ public class PrincipalControlador {
 	public PrincipalModelo modelo;
     public JframePrincipal vista;
     public Conexion conexion;
+    public PrincipalControlador controlador;
     
     private controladorJframe controladorJframe;
-    public controladorBienvenida controladorBienvenida;
+    private controladorBienvenida controladorBienvenida;
     public controladorCrearUsuario controladorCrearUsuario;
 
 	public controladorCrearDepartamentos controladorCrearDepartamentos;
@@ -55,7 +56,7 @@ public class PrincipalControlador {
     	this.controladorJframe.addListeners();
     	
     	// añadimos listeners a los botones del panel bienvenida
-    	this.controladorBienvenida = new controladorBienvenida(vista, controladorJframe);
+    	this.controladorBienvenida = new controladorBienvenida(vista,controlador);
     	this.controladorBienvenida.addListeners();
     	
     	// añadimos listeners a los botones del panel CrearUsuario
@@ -74,7 +75,7 @@ public class PrincipalControlador {
     	
 
     	this.controladorCrearUsuario.addListeners();
-    	
+
     	// añadimos listeners a los botones del panel MenuEmple
     	this.controladorMenuEmple = new controladorMenuEmple(vista, controladorJframe);
     	this.controladorMenuEmple.addListeners();

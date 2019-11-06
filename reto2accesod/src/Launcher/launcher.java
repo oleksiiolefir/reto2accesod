@@ -4,39 +4,48 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import controlador.PrincipalControlador;
 import modelo.Conexion;
 import modelo.Consultas;
-import modelo.Empleado;
-import modelo.lecturaCSV;
-import vista.Departamentos;
-import vista.bienvenida;
-import vista.verDepartamentos;
 import modelo.Departamento;
+import modelo.Empleado;
+import modelo.PrincipalModelo;
+import modelo.lectorTXT;
+import modelo.lecturaCSV;
+import vista.JframePrincipal;
 
 public class launcher {
-	static String archivoCsv = "ArchivoCSV.csv";
 	static ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 	static ArrayList<Departamento> departamentos = new ArrayList<Departamento>();
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
-		
+
+		JframePrincipal vista = new JframePrincipal();
+		PrincipalModelo modelo = new PrincipalModelo();
+		PrincipalControlador controlador = new PrincipalControlador(modelo, vista);
+		controlador.inicializarVista();
+		controlador.inicializarListeners(); 
+
+
 		Conexion c = new Conexion();
 
 		c.conectar();
 
 		Consultas consult = new Consultas(c);
-		
-		//lecturaCSV.funcionesDeLectorCsv(archivoCsv);
-		
-		departamentos=modelo.lecturaCSV.funcionesDeLectorCsv(archivoCsv);
-		/*for(int i=0;i<departamentos.size();i++) {
-			System.out.println("la i e s " +i);
-			System.out.println("aaa :"+departamentos.get(i).getCod_dept()+departamentos.get(i).getDnombre()+departamentos.get(i).getLugar());
-		}
-		empleados = modelo.lectorTXT.lecturaTXT();	
-		*/
 
-		//consult.insertarEmpleados(empleados);
+
+		departamentos=lecturaCSV.funcionesDeLectorCsv();
+
+		empleados = lectorTXT.lecturaTXT();	
+		
+		
+		consult.insertarEmpleados(empleados);
+		consult.insertarDepartamentos(departamentos);
+		
+
+		controlador.inicializarVista();
+		controlador.inicializarListeners();
+
 		
 		
 	}

@@ -9,18 +9,20 @@ import vista.JframePrincipal;
 
 public class controladorBienvenida implements ActionListener{
 	private JframePrincipal vista;
-	public controladorJframe controlador;
+
+	public PrincipalControlador controlador;
+
 	
-	public controladorBienvenida(JframePrincipal vista, controladorJframe controlador) {
+	public controladorBienvenida(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
 		this.controlador = controlador;
 	}
-	
+
 	/**
 	 * Se crean los listeners del panel
 	 */
 	public void addListeners() {
-		vista.bienvenida.btnBienvenida.addActionListener(this);
+		vista.bienvenida.btnBienvenida.addActionListener(null);
 	}
 	
 	 /**

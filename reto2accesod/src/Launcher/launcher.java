@@ -34,11 +34,17 @@ public class launcher {
 			System.out.println("aaa :"+departamentos.get(i).getCod_dept()+departamentos.get(i).getDnombre()+departamentos.get(i).getLugar());
 		}
 		empleados = modelo.lectorTXT.lecturaTXT();	
+<<<<<<< HEAD
 		
  
 		consult.insertarEmpleados(empleados);*/
 		
 		
+=======
+		*/
+
+		consult.insertarEmpleados(empleados);
+>>>>>>> d08961a36f3ecf2d6810a6a958ee92d442a2c1a3
 		
 		
 	}

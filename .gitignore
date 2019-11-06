@@ -1,2 +1,7 @@
 .classpath
 .project
+<<<<<<< HEAD
+=======
+bin/
+*.class
+>>>>>>> d08961a36f3ecf2d6810a6a958ee92d442a2c1a3

@@ -53,8 +53,8 @@ Object sourceObject = e.getSource();
 				
 			}
 			
-		//JCOMBOBOX DE CIUDAD Y TIPO ALOJAMIENTO
-		} 
+
+			} 
 	}
 
 }

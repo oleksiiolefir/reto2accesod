@@ -9,9 +9,9 @@ import vista.JframePrincipal;
 
 public class controladorMenuEmple implements ActionListener{
 	private JframePrincipal vista;
-	private controladorJframe controlador;
+	private PrincipalControlador controlador;
 	
-	public controladorMenuEmple(JframePrincipal vista, controladorJframe controlador) {
+	public controladorMenuEmple(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
 		this.controlador = controlador;
 	}
@@ -39,6 +39,7 @@ public class controladorMenuEmple implements ActionListener{
 				case "Crear Nuevo Usuario":	//Cuando pulsa el boton Crear Nuevo Usuario pasan las siguientes cosas: 
 					vista.crearUsuario.setVisible(true);
 					vista.menuEmple.setVisible(false);
+					System.out.println("AAAAAAAAAAAAA");
 					break;
 				
 				case "Consultar Usuarios":

@@ -41,8 +41,9 @@ public class JframePrincipal extends JFrame {
 	
 	private void anadirPaneles() {
 		getContentPane().add(bienvenida);
-		getContentPane().add(menu);
 		getContentPane().add(crearUsuario);
-		getContentPane().add(menuEmple);		
+		getContentPane().add(menuEmple);	
+		getContentPane().add(menu);
+			
 	}
 }

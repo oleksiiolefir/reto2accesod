@@ -23,6 +23,7 @@ public class launcher {
 		JframePrincipal vista = new JframePrincipal();
 		PrincipalModelo modelo = new PrincipalModelo();
 		PrincipalControlador controlador = new PrincipalControlador(modelo, vista);
+		
 		controlador.inicializarVista();
 		controlador.inicializarListeners(); 
 
@@ -42,14 +43,7 @@ public class launcher {
 		
 		
 		consult.insertarEmpleados(empleados);
-		consult.insertarDepartamentos(departamentos);
-		
-
-		controlador.inicializarVista();
-		controlador.inicializarListeners();
-
-		
-		
+		consult.insertarDepartamentos(departamentos);	
 	}
 
 }

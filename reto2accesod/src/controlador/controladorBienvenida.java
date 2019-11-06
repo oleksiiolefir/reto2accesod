@@ -9,7 +9,6 @@ import vista.JframePrincipal;
 
 public class controladorBienvenida implements ActionListener{
 	private JframePrincipal vista;
-
 	public PrincipalControlador controlador;
 
 	
@@ -22,7 +21,7 @@ public class controladorBienvenida implements ActionListener{
 	 * Se crean los listeners del panel
 	 */
 	public void addListeners() {
-		vista.bienvenida.btnBienvenida.addActionListener(null);
+		vista.bienvenida.btnBienvenida.addActionListener(this);
 	}
 	
 	 /**
@@ -30,17 +29,9 @@ public class controladorBienvenida implements ActionListener{
 	 */
 	public void actionPerformed(ActionEvent e) {
 		Object sourceObject = e.getSource();
-		
-		
-		String botonPulsado = ((JButton) sourceObject).getActionCommand();
-	   
-		// comprobamos que boton se ha pulsado y ejecutamos sus acciones
-		switch (botonPulsado) {
-			case "BIENVENIDA":	//Cuando pulsa el boton BIENVENIDA pasan las siguientes cosas: 
-				vista.menu.setVisible(true);
-				vista.bienvenida.setVisible(false);
-				break;
-		}
-		
+    		// guardamos el nombre del boton pulsado
+		String botonPulsado = ((JButton) e.getSource()).getActionCommand();
+			vista.menuEmple.setVisible(true);
+			vista.bienvenida.setVisible(false);	
 	}
 }

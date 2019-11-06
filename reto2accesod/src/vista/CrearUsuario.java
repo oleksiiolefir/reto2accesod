@@ -6,8 +6,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 
 public class CrearUsuario extends JPanel {
-	private JTextField textCodEmple, textNombre, textApellido, textSueldo, textDept, textCargo, textConCargo, textJefe;
-	private JLabel lbCodEmple, lbNombre, lbApellido, lbSueldo, lbDept, lbCargo, lbConCargo, lbJefe;
+	public JTextField textCodEmple, textNombre, textApellido, textSueldo, textDept, textCargo, textConCargo, textJefe;
+	public JLabel lbCodEmple, lbNombre, lbApellido, lbSueldo, lbDept, lbCargo, lbConCargo, lbJefe;
 	public JButton btnAgregar, btnPrueba;
 	
 	/**

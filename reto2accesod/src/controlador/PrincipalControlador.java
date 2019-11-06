@@ -9,7 +9,6 @@ public class PrincipalControlador {
 	public PrincipalModelo modelo;
     public JframePrincipal vista;
     public Conexion conexion;
-    public PrincipalControlador controlador;
     
     private controladorJframe controladorJframe;
     private controladorBienvenida controladorBienvenida;
@@ -56,28 +55,26 @@ public class PrincipalControlador {
     	this.controladorJframe.addListeners();
     	
     	// añadimos listeners a los botones del panel bienvenida
-    	this.controladorBienvenida = new controladorBienvenida(vista,controlador);
+    	this.controladorBienvenida = new controladorBienvenida(vista,this);
     	this.controladorBienvenida.addListeners();
     	
     	// añadimos listeners a los botones del panel CrearUsuario
-    	this.controladorCrearUsuario = new controladorCrearUsuario(vista, controladorJframe);
-
-    	this.controladorBienvenida.addListeners();
+    	this.controladorCrearUsuario = new controladorCrearUsuario(vista,this);
+    	this.controladorCrearUsuario.addListeners();
     	
-    	this.controladorCrearDepartamentos = new controladorCrearDepartamentos();
-    	this.controladorBienvenida.addListeners();
+    	
+    	/*this.controladorCrearDepartamentos = new controladorCrearDepartamentos();
+    	this.controladorCrearDepartamentos.addListeners();
     	
     	this.controladorDepartamentos = new controladorDepartamentos();
     	this.controladorBienvenida.addListeners();
     	
     	this.controladorVerDepartamentos = new controladorVerDepartamentos();
-    	this.controladorBienvenida.addListeners();
-    	
-
-    	this.controladorCrearUsuario.addListeners();
+    	this.controladorVerDepartamentos.addListeners();
+    	*/
 
     	// añadimos listeners a los botones del panel MenuEmple
-    	this.controladorMenuEmple = new controladorMenuEmple(vista, controladorJframe);
+    	this.controladorMenuEmple = new controladorMenuEmple(vista, this);
     	this.controladorMenuEmple.addListeners();
 
     }

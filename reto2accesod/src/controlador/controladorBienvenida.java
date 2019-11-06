@@ -9,7 +9,7 @@ import vista.JframePrincipal;
 
 public class controladorBienvenida implements ActionListener{
 	private JframePrincipal vista;
-	private controladorJframe controlador;
+	public controladorJframe controlador;
 	
 	public controladorBienvenida(JframePrincipal vista, controladorJframe controlador) {
 		this.vista = vista;

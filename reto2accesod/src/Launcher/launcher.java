@@ -1,7 +1,6 @@
 package Launcher;
 
 import java.io.IOException;
-import java.lang.ModuleLayer.Controller;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -36,10 +35,8 @@ public class launcher {
 		}
 		empleados = modelo.lectorTXT.lecturaTXT();	
 		*/
-		bienvenida bienvenida=new bienvenida();
 
-		bienvenida.setVisible(true); 
-		//consult.insertarEmpleados(empleados);
+		consult.insertarEmpleados(empleados);
 		
 		
 	}

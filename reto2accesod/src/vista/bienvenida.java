@@ -12,6 +12,7 @@ public class bienvenida extends JPanel {
 	public JButton btnBienvenida;
 	public JLabel lblAaaaa;
 	
+
 	public bienvenida() {
 		setLayout(null);
 		

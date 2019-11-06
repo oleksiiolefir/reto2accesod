@@ -23,9 +23,11 @@ public class lecturaCSV {
 	public static final String QUOTE="\"";
 	public static ArrayList<Departamento> funcionesDeLectorCsv()  throws IOException, ClassNotFoundException, SQLException 
 	{
+
 	
 		int i = 0;
 		String csvFile ="ficheros"+ File.separator+"ArchivoCSV.csv";
+
 		BufferedReader br = null;
 		String line = "";
 		//Se define separador ","
@@ -45,9 +47,7 @@ public class lecturaCSV {
 		        dept.setCod_dept(Integer.parseInt(datos[0]));
 		        dept.setLugar(datos[1]);
 		        dept.setDnombre(datos[2]);
-		       
 		       deptlist.add(i,dept);
-		    
 		       System.out.println("la i es " +i);
 		       System.out.println("aaa :"+deptlist.get(i).getCod_dept()+deptlist.get(i).getDnombre()+deptlist.get(i).getLugar());
 		       i++;

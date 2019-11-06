@@ -3,11 +3,15 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+
 import vista.JframePrincipal;
 
 public class controladorBienvenida implements ActionListener{
 	private JframePrincipal vista;
-	private PrincipalControlador controlador;
+
+	public PrincipalControlador controlador;
+
 	
 	public controladorBienvenida(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
@@ -25,7 +29,18 @@ public class controladorBienvenida implements ActionListener{
 	 * Acción de los distintos listeners
 	 */
 	public void actionPerformed(ActionEvent e) {
-		vista.menu.setVisible(true);
-		vista.bienvenida.setVisible(false);
+		Object sourceObject = e.getSource();
+		
+		
+		String botonPulsado = ((JButton) sourceObject).getActionCommand();
+	   
+		// comprobamos que boton se ha pulsado y ejecutamos sus acciones
+		switch (botonPulsado) {
+			case "BIENVENIDA":	//Cuando pulsa el boton BIENVENIDA pasan las siguientes cosas: 
+				vista.menu.setVisible(true);
+				vista.bienvenida.setVisible(false);
+				break;
+		}
+		
 	}
 }

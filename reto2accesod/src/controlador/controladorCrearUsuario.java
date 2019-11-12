@@ -15,9 +15,9 @@ import modelo.Empleado;
 
 public class controladorCrearUsuario implements ActionListener{
 	private JframePrincipal vista;
-	private controladorJframe controlador;
+	private PrincipalControlador controlador;
 	
-	public controladorCrearUsuario(JframePrincipal vista, controladorJframe controlador) {
+	public controladorCrearUsuario(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
 		this.controlador = controlador;
 	}
@@ -29,7 +29,7 @@ public class controladorCrearUsuario implements ActionListener{
 		vista.crearUsuario.btnAgregar.addActionListener(this);
 		vista.crearUsuario.btnPrueba.addActionListener(this);				
 	}	
-	
+
 	 /**
 	 * Acción de los distintos listeners
 	 */

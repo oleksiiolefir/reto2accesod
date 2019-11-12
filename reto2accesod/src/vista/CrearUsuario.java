@@ -8,7 +8,9 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
 public class CrearUsuario extends JPanel {
-	public JTextField textCodEmple, textNombre, textApellido, textSueldo, textDept, textCargo, textJefe;
+
+	public JTextField textCodEmple, textNombre, textApellido, textSueldo, textDept, textCargo, textConCargo, textJefe;
+
 	public JLabel lbCodEmple, lbNombre, lbApellido, lbSueldo, lbDept, lbCargo, lbConCargo, lbJefe;
 	public JButton btnAgregar, btnPrueba;
 	public JComboBox comboBoxCargo;

@@ -5,50 +5,52 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
+import java.awt.CardLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class JframePrincipal extends JFrame {
 
-	private JPanel contentPane;
-	
-	private static final long serialVersionUID = 1L;
-	
+		
 	//atributos
-	public JFrame frame;
-	public bienvenida bienvenida;
-	public CrearUsuario crearUsuario;
 	public ConsultarUsuario consultarUsuario;
 	public MostrarUsuarios mostrarUsuarios;
+	public JPanel contentPane;
+	public Bienvenida bienvenida;
+	public CardLayout cardLayout;
 	public Menu menu;
 	public MenuEmple menuEmple;
-	
-	//constructor
+	public CrearUsuario crearUsuario;
+	public CrearDepartamentos crearDepartamentos;
+	/**
+	 * Create the frame.
+	 */
 	public JframePrincipal() {
-		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-		setBounds(100, 100, 1024, 720);
-		setLocationRelativeTo(null);
-		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 483, 333);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		cardLayout = new CardLayout(0,0);
+		contentPane.setLayout(cardLayout);
 		
-		inicializarPaneles();
-		anadirPaneles();
-	}
-
-	private void inicializarPaneles() {
-		bienvenida = new bienvenida();
+		bienvenida = new Bienvenida();
 		menu = new Menu();
+		menuEmple = new MenuEmple();
 		crearUsuario = new CrearUsuario();
 		consultarUsuario = new ConsultarUsuario();
 		mostrarUsuarios = new MostrarUsuarios();
-		menuEmple = new MenuEmple();	
+
+		crearDepartamentos = new CrearDepartamentos();
+		
+		contentPane.add(bienvenida, "1");
+		contentPane.add(menu, "2");
+		contentPane.add(menuEmple, "3");
+		contentPane.add(crearUsuario, "4");
+		contentPane.add(crearDepartamentos, "5");
+		setVisible(true);
+
 	}
-	
-	private void anadirPaneles() {
-		getContentPane().add(bienvenida);
-		getContentPane().add(menu);
-		getContentPane().add(crearUsuario);
-		getContentPane().add(consultarUsuario);
-		getContentPane().add(mostrarUsuarios);
-		getContentPane().add(menuEmple);
-	}
+
 }

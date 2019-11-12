@@ -17,7 +17,7 @@ public class PrincipalControlador {
 	public controladorCrearDepartamentos controladorCrearDepartamentos;
 	public controladorDepartamentos controladorDepartamentos;
 	private controladorVerDepartamentos controladorVerDepartamentos;
-  public controladorMenu  controladorMenu;
+	public controladorMenu  controladorMenu;
 
     public controladorMenuEmple controladorMenuEmple;   
 
@@ -33,7 +33,7 @@ public class PrincipalControlador {
 		this.vista = vista;
 		this.conexion = new Conexion();
 		
-		inicializarListeners();
+		inicializarControladores();
     }
     /**
 	 * Esta funcion se encarga de inicializar la interfaz
@@ -42,7 +42,7 @@ public class PrincipalControlador {
     /**
 	 * Esta funcion de encarga de inicializar los botones
 	 */
-    public void inicializarListeners() {
+    public void inicializarControladores() {
     	// añadimos un listener para comprobar el cierre de la aplicacion en el Jframe principal
 
     	// añadimos listeners a los botones del panel bienvenida

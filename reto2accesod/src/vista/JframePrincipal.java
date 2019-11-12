@@ -18,23 +18,7 @@ public class JframePrincipal extends JFrame {
 	public Menu menu;
 	public MenuEmple menuEmple;
 	public CrearUsuario crearUsuario;
-	
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					JframePrincipal frame = new JframePrincipal();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
+	public CrearDepartamentos crearDepartamentos;
 	/**
 	 * Create the frame.
 	 */
@@ -51,14 +35,15 @@ public class JframePrincipal extends JFrame {
 		menu = new Menu();
 		menuEmple = new MenuEmple();
 		crearUsuario = new CrearUsuario();
-		
+		crearDepartamentos = new CrearDepartamentos();
 		
 		contentPane.add(bienvenida, "1");
 		contentPane.add(menu, "2");
 		contentPane.add(menuEmple, "3");
 		contentPane.add(crearUsuario, "4");
+		contentPane.add(crearDepartamentos, "5");
 		setVisible(true);
-		
+
 	}
 
 }

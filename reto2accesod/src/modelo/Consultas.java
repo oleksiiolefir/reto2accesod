@@ -98,5 +98,38 @@ public class Consultas {
 		  }
 		  connection.close();
 	 }
+	
+	public Object [] compararId() {
+		Object [] lista=new Object[5];
+		int contador = 0;
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String query = "SELECT id FROM `empleado` WHERE ";
+
+		try {
+		    // Abrimos una conexion
+		    connection = conexion.conectar();
+
+		    // preparamos la consulta SQL a la base de datos
+		    ps = connection.prepareStatement(query);
+
+		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
+		    rs = ps.executeQuery();
+
+		    // crea objetos Linea con los resultados y los añade a un arrayList
+		    while (rs.next()) {
+		    	lista[contador]=rs;
+		    	contador++;
+		    }
+		} catch (SQLException e) {
+		    e.printStackTrace();
+		} finally {
+		    // cerramos la conexion
+		    conexion.desconectar();
+		}
+
+		return lista;
+	    }
 }
 	 

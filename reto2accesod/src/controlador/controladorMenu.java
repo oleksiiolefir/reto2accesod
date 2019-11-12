@@ -42,7 +42,7 @@ public class controladorMenu{
 				
 				break;
 			case "DEPARTAMENTOS":
-				
+				vista.cardLayout.show(vista.contentPane, "5");
 				break;
 			}
 			

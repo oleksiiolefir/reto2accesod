@@ -17,7 +17,7 @@ public class PrincipalControlador {
 	public controladorCrearDepartamentos controladorCrearDepartamentos;
 	public controladorDepartamentos controladorDepartamentos;
 	private controladorVerDepartamentos controladorVerDepartamentos;
-    
+  public controladorMenu  controladorMenu;
 
     public controladorMenuEmple controladorMenuEmple;   
 
@@ -33,34 +33,26 @@ public class PrincipalControlador {
 		this.vista = vista;
 		this.conexion = new Conexion();
 		
+		inicializarListeners();
     }
     /**
 	 * Esta funcion se encarga de inicializar la interfaz
 	 */
-    public void inicializarVista() {
-    	vista.setVisible(true);
-    	vista.bienvenida.setVisible(false);
-    	vista.crearUsuario.setVisible(false);
-    	vista.menu.setVisible(false);
-    	vista.menuEmple.setVisible(true);
-    	
-   
-    }
+  
     /**
 	 * Esta funcion de encarga de inicializar los botones
 	 */
     public void inicializarListeners() {
     	// añadimos un listener para comprobar el cierre de la aplicacion en el Jframe principal
-    	this.controladorJframe = new controladorJframe(vista);
-    	this.controladorJframe.addListeners();
-    	
+
     	// añadimos listeners a los botones del panel bienvenida
-    	this.controladorBienvenida = new controladorBienvenida(vista,this);
-    	this.controladorBienvenida.addListeners();
-    	
+    	controladorBienvenida = new controladorBienvenida(vista, this);
+    	// añadimos listeners a los botones del panel MenuEmple
+    	controladorMenu = new controladorMenu(vista,this);
+    	controladorMenuEmple = new controladorMenuEmple(vista, this);
     	// añadimos listeners a los botones del panel CrearUsuario
-    	this.controladorCrearUsuario = new controladorCrearUsuario(vista,this);
-    	this.controladorCrearUsuario.addListeners();
+    	controladorCrearUsuario = new controladorCrearUsuario(vista,this);
+    	
     	
     	
     	/*this.controladorCrearDepartamentos = new controladorCrearDepartamentos();
@@ -73,9 +65,8 @@ public class PrincipalControlador {
     	this.controladorVerDepartamentos.addListeners();
     	*/
 
-    	// añadimos listeners a los botones del panel MenuEmple
-    	this.controladorMenuEmple = new controladorMenuEmple(vista, this);
-    	this.controladorMenuEmple.addListeners();
+    	
+    	
 
     }
 }

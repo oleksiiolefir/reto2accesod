@@ -4,11 +4,16 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class CrearUsuario extends JPanel {
+
 	public JTextField textCodEmple, textNombre, textApellido, textSueldo, textDept, textCargo, textConCargo, textJefe;
+
 	public JLabel lbCodEmple, lbNombre, lbApellido, lbSueldo, lbDept, lbCargo, lbConCargo, lbJefe;
 	public JButton btnAgregar, btnPrueba;
+	public JComboBox comboBoxCargo;
 	
 	/**
 	 * Create the panel.
@@ -78,11 +83,6 @@ public class CrearUsuario extends JPanel {
 		textCargo.setBounds(260, 179, 120, 19);
 		add(textCargo);
 		
-		textConCargo = new JTextField();
-		textConCargo.setColumns(10);
-		textConCargo.setBounds(260, 209, 120, 19);
-		add(textConCargo);
-		
 		textJefe = new JTextField();
 		textJefe.setColumns(10);
 		textJefe.setBounds(260, 240, 120, 19);
@@ -95,6 +95,11 @@ public class CrearUsuario extends JPanel {
 		btnPrueba = new JButton("prueba");
 		btnPrueba.setBounds(35, 271, 89, 23);
 		add(btnPrueba);
+		
+		comboBoxCargo = new JComboBox();
+		comboBoxCargo.setModel(new DefaultComboBoxModel(new String[] {"Si", "No"}));
+		comboBoxCargo.setBounds(260, 209, 120, 20);
+		add(comboBoxCargo);
 
 	}
 }

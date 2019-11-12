@@ -20,21 +20,17 @@ public class launcher {
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
 
+		
 		JframePrincipal vista = new JframePrincipal();
+		
 		PrincipalModelo modelo = new PrincipalModelo();
 		PrincipalControlador controlador = new PrincipalControlador(modelo, vista);
 		
-		controlador.inicializarVista();
-		controlador.inicializarListeners(); 
-
-
 		Conexion c = new Conexion();
 
 		c.conectar();
 
 		Consultas consult = new Consultas(c);
-		
-		
 
 
 		departamentos=lecturaCSV.funcionesDeLectorCsv();

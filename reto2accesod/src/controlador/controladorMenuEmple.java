@@ -2,56 +2,45 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-
 import vista.JframePrincipal;
 
-public class controladorMenuEmple implements ActionListener{
+public class controladorMenuEmple {
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
 	
 	public controladorMenuEmple(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
 		this.controlador = controlador;
+		initListeners();
 	}
 	
 	/**
 	 * Se crean los listeners del panel
 	 */
-	public void addListeners() {
-		vista.menuEmple.btnAtras.addActionListener(this);
-		vista.menuEmple.btnConsultarUsu.addActionListener(this);
-		vista.menuEmple.btnCrearUsu.addActionListener(this);
+	public void initListeners() {
+		vista.menuEmple.btnCrearUsu.addActionListener(new BotonListener());
+		vista.menuEmple.btnConsultarUsu.addActionListener(new BotonListener());
+		vista.menuEmple.btnAtras.addActionListener(new BotonListener());
 	}
 	
-	 /**
-	 * Acción de los distintos listeners
-	 */
-	public void actionPerformed(ActionEvent e) {
-		Object sourceObject = e.getSource();
-		
-			
-			String botonPulsado = ((JButton) sourceObject).getActionCommand();
-		   
-			// comprobamos que boton se ha pulsado y ejecutamos sus acciones
-			switch (botonPulsado) {
-				case "Crear Nuevo Usuario":	//Cuando pulsa el boton Crear Nuevo Usuario pasan las siguientes cosas: 
-					vista.crearUsuario.setVisible(true);
-					vista.menuEmple.setVisible(false);
-					System.out.println("AAAAAAAAAAAAA");
-					break;
-				
-				case "Consultar Usuarios":
-					vista.menuEmple.setVisible(false);
-					break;
-				
-				case "Atras":
-					vista.menu.setVisible(true);
-					vista.menuEmple.setVisible(false);
-					break;
-			}
-			
+	private class BotonListener implements ActionListener {
 
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String botonPulsado = e.getActionCommand();
+			switch (botonPulsado) {
+			case "Crear Nuevo Usuario":
+				vista.cardLayout.show(vista.contentPane, "4");
+				break;
+			case "Consultar Usuarios":
+				
+				break;
+			
+			case "Atras":
+				vista.cardLayout.show(vista.contentPane, "2");
+				break;
+			}
+		}
+				
 	}
 }

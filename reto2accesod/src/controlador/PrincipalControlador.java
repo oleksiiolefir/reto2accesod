@@ -9,7 +9,6 @@ public class PrincipalControlador {
 	public PrincipalModelo modelo;
     public JframePrincipal vista;
     public Conexion conexion;
-    public PrincipalControlador controlador;
     
     private controladorJframe controladorJframe;
     private controladorBienvenida controladorBienvenida;
@@ -18,7 +17,7 @@ public class PrincipalControlador {
 	public controladorCrearDepartamentos controladorCrearDepartamentos;
 	public controladorDepartamentos controladorDepartamentos;
 	private controladorVerDepartamentos controladorVerDepartamentos;
-    
+	public controladorMenu  controladorMenu;
 
     public controladorMenuEmple controladorMenuEmple;   
 
@@ -34,51 +33,40 @@ public class PrincipalControlador {
 		this.vista = vista;
 		this.conexion = new Conexion();
 		
+		inicializarControladores();
     }
     /**
 	 * Esta funcion se encarga de inicializar la interfaz
 	 */
-    public void inicializarVista() {
-    	vista.setVisible(true);
-    	vista.bienvenida.setVisible(false);
-    	vista.crearUsuario.setVisible(false);
-    	vista.menu.setVisible(false);
-    	vista.menuEmple.setVisible(true);
-    	
-   
-    }
+  
     /**
 	 * Esta funcion de encarga de inicializar los botones
 	 */
-    public void inicializarListeners() {
+    public void inicializarControladores() {
     	// añadimos un listener para comprobar el cierre de la aplicacion en el Jframe principal
-    	this.controladorJframe = new controladorJframe(vista);
-    	this.controladorJframe.addListeners();
-    	
-    	// añadimos listeners a los botones del panel bienvenida
-    	this.controladorBienvenida = new controladorBienvenida(vista,controlador);
-    	this.controladorBienvenida.addListeners();
-    	
-    	// añadimos listeners a los botones del panel CrearUsuario
-    	this.controladorCrearUsuario = new controladorCrearUsuario(vista, controladorJframe);
 
-    	this.controladorBienvenida.addListeners();
+    	// añadimos listeners a los botones del panel bienvenida
+    	controladorBienvenida = new controladorBienvenida(vista, this);
+    	// añadimos listeners a los botones del panel MenuEmple
+    	controladorMenu = new controladorMenu(vista,this);
+    	controladorMenuEmple = new controladorMenuEmple(vista, this);
+    	// añadimos listeners a los botones del panel CrearUsuario
+    	controladorCrearUsuario = new controladorCrearUsuario(vista,this);
     	
-    	this.controladorCrearDepartamentos = new controladorCrearDepartamentos();
-    	this.controladorBienvenida.addListeners();
+    	
+    	
+    	/*this.controladorCrearDepartamentos = new controladorCrearDepartamentos();
+    	this.controladorCrearDepartamentos.addListeners();
     	
     	this.controladorDepartamentos = new controladorDepartamentos();
     	this.controladorBienvenida.addListeners();
     	
     	this.controladorVerDepartamentos = new controladorVerDepartamentos();
-    	this.controladorBienvenida.addListeners();
+    	this.controladorVerDepartamentos.addListeners();
+    	*/
+
     	
-
-    	this.controladorCrearUsuario.addListeners();
-
-    	// añadimos listeners a los botones del panel MenuEmple
-    	this.controladorMenuEmple = new controladorMenuEmple(vista, controladorJframe);
-    	this.controladorMenuEmple.addListeners();
+    	
 
     }
 }

@@ -7,40 +7,36 @@ import javax.swing.JButton;
 
 import vista.JframePrincipal;
 
-public class controladorBienvenida implements ActionListener{
-	private JframePrincipal vista;
-
+public class controladorBienvenida {
+	public JframePrincipal vista;
 	public PrincipalControlador controlador;
 
-	
 	public controladorBienvenida(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
-		this.controlador = controlador;
-	}
-
-	/**
-	 * Se crean los listeners del panel
-	 */
-	public void addListeners() {
-		vista.bienvenida.btnBienvenida.addActionListener(null);
-	}
+		this.controlador = controlador;		
+		
+		initListeners();
+	}	
 	
 	 /**
 	 * Acción de los distintos listeners
 	 */
-	public void actionPerformed(ActionEvent e) {
-		Object sourceObject = e.getSource();
+	
+	public void initListeners() {
+		vista.bienvenida.btnBienvenida.addActionListener(new BotonListener());
 		
-		
-		String botonPulsado = ((JButton) sourceObject).getActionCommand();
-	   
-		// comprobamos que boton se ha pulsado y ejecutamos sus acciones
-		switch (botonPulsado) {
-			case "BIENVENIDA":	//Cuando pulsa el boton BIENVENIDA pasan las siguientes cosas: 
-				vista.menu.setVisible(true);
-				vista.bienvenida.setVisible(false);
-				break;
+	}
+	
+	private class BotonListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String botonPulsado = e.getActionCommand();
+			switch (botonPulsado) {
+			case "bienvenida":
+				vista.cardLayout.show(vista.contentPane, "2");
+			}
+			
 		}
-		
 	}
 }

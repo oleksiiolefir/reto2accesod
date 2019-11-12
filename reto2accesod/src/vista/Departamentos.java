@@ -19,18 +19,20 @@ public class Departamentos extends JPanel  implements ActionListener {
 	public Departamentos() {
 		setLayout(null);
 		
+		
+		
 		JButton btnNewButton = new JButton("Crear Departamentos");
 		btnNewButton.setBounds(111, 30, 192, 48);
 		add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Ver Departementos");
 		btnNewButton_1.setBounds(111, 159, 192, 48);
-		add(btnNewButton_1);
-
-	}
+		add(btnNewButton_1);}
+		
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
-	}}
+	}
+}

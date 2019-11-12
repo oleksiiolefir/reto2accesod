@@ -18,6 +18,8 @@ public class JframePrincipal extends JFrame {
 	public JFrame frame;
 	public bienvenida bienvenida;
 	public CrearUsuario crearUsuario;
+	public ConsultarUsuario consultarUsuario;
+	public MostrarUsuarios mostrarUsuarios;
 	public Menu menu;
 	public MenuEmple menuEmple;
 	
@@ -36,6 +38,8 @@ public class JframePrincipal extends JFrame {
 		bienvenida = new bienvenida();
 		menu = new Menu();
 		crearUsuario = new CrearUsuario();
+		consultarUsuario = new ConsultarUsuario();
+		mostrarUsuarios = new MostrarUsuarios();
 		menuEmple = new MenuEmple();	
 	}
 	
@@ -43,6 +47,8 @@ public class JframePrincipal extends JFrame {
 		getContentPane().add(bienvenida);
 		getContentPane().add(menu);
 		getContentPane().add(crearUsuario);
+		getContentPane().add(consultarUsuario);
+		getContentPane().add(mostrarUsuarios);
 		getContentPane().add(menuEmple);
 	}
 }

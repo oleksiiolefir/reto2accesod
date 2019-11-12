@@ -27,6 +27,7 @@ public class controladorCrearUsuario implements ActionListener{
 	 */
 	public void addListeners() {
 		vista.crearUsuario.btnAgregar.addActionListener(this);
+		vista.crearUsuario.btnPrueba.addActionListener(this);				
 	}	
 	
 	 /**
@@ -47,7 +48,7 @@ public class controladorCrearUsuario implements ActionListener{
 			
 			switch(botonPulsado) {
 			case "GUARDAR":
-				lista=consult.compararId();
+				lista=consult.comparar("id");
 				for(int i=0; i<lista.length ; i++) {
 					if(lista[i]==vista.crearUsuario.textCodEmple.getText()) {
 						contador++;

@@ -99,13 +99,13 @@ public class Consultas {
 		  connection.close();
 	 }
 	
-	public Object [] compararId() {
+	public Object [] comparar(String variable) {
 		Object [] lista=new Object[5];
 		int contador = 0;
 
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String query = "SELECT id FROM `empleado` WHERE ";
+		String query = "SELECT " + variable + "FROM `empleado` WHERE ";
 
 		try {
 		    // Abrimos una conexion

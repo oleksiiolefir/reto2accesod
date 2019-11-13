@@ -105,7 +105,7 @@ public class Consultas {
 
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String query = "SELECT " + variable + "FROM `empleado` WHERE ";
+		String query = "SELECT " + variable + " FROM `empleado`";
 
 		try {
 		    // Abrimos una conexion

@@ -12,6 +12,7 @@ import vista.JframePrincipal;
 public class controladorMostrarUsu{
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
+	int i=0;
 	
 	public controladorMostrarUsu(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
@@ -33,22 +34,26 @@ public class controladorMostrarUsu{
 		public void actionPerformed(ActionEvent e) {
 			
 			Object sourceObject = e.getSource();
-			ArrayList<Empleado> empleados = new ArrayList<Empleado>();
-			int i=0;
+			ArrayList<Empleado> empleadosM = new ArrayList<Empleado>();
+			empleadosM = controlador.controladorConsultarUsu.lista;
+			
 			if (sourceObject instanceof JButton) {
 				
 				String botonPulsado = ((JButton) sourceObject).getActionCommand();
 				switch(botonPulsado) {
 					case "SIGUIENTE":
-						if(i<=empleados.size()) {
-							vista.mostrarUsuarios.lblBCod.setText(Integer.toString(empleados.get(i).getId()));
-							vista.mostrarUsuarios.lblBNombre.setText(empleados.get(i).getNombre());
-							vista.mostrarUsuarios.lblBApellid.setText(empleados.get(i).getApellido());
-							vista.mostrarUsuarios.lblBDepat.setText(Integer.toString(empleados.get(i).getCod_dept()));
-							vista.mostrarUsuarios.lblBCargo.setText(empleados.get(i).getPuesto());
-							vista.mostrarUsuarios.lblBJefe.setText(Integer.toString(empleados.get(i).getBoss()));
+						if(i<(empleadosM.size()-1) ) {
+							i++;	
+							vista.mostrarUsuarios.lblBCod.setText(Integer.toString(empleadosM.get(i).getId()));
+							vista.mostrarUsuarios.lblBNombre.setText(empleadosM.get(i).getNombre());
+							vista.mostrarUsuarios.lblBApellid.setText(empleadosM.get(i).getApellido());
+							vista.mostrarUsuarios.lblBDepat.setText(Integer.toString(empleadosM.get(i).getCod_dept()));
+							vista.mostrarUsuarios.lblBCargo.setText(empleadosM.get(i).getPuesto());
+							vista.mostrarUsuarios.lblBJefe.setText(Integer.toString(empleadosM.get(i).getBoss()));
 							vista.mostrarUsuarios.btnAnterior.setEnabled(true);
-							i++;
+							if(i==(empleadosM.size()-1)) {
+								vista.mostrarUsuarios.btnSiguiente.setEnabled(false);	
+							}
 						}else {
 							vista.mostrarUsuarios.btnSiguiente.setEnabled(false);							
 						}
@@ -56,14 +61,17 @@ public class controladorMostrarUsu{
 					break;	
 					case "ANTERIOR":
 						if(i!=0) {
-							vista.mostrarUsuarios.lblBCod.setText(Integer.toString(empleados.get(i).getId()));
-							vista.mostrarUsuarios.lblBNombre.setText(empleados.get(i).getNombre());
-							vista.mostrarUsuarios.lblBApellid.setText(empleados.get(i).getApellido());
-							vista.mostrarUsuarios.lblBDepat.setText(Integer.toString(empleados.get(i).getCod_dept()));
-							vista.mostrarUsuarios.lblBCargo.setText(empleados.get(i).getPuesto());
-							vista.mostrarUsuarios.lblBJefe.setText(Integer.toString(empleados.get(i).getBoss()));
-							vista.mostrarUsuarios.btnSiguiente.setEnabled(true);
 							i--;
+							if(i==0) {
+								vista.mostrarUsuarios.btnAnterior.setEnabled(false);
+							}
+							vista.mostrarUsuarios.lblBCod.setText(Integer.toString(empleadosM.get(i).getId()));
+							vista.mostrarUsuarios.lblBNombre.setText(empleadosM.get(i).getNombre());
+							vista.mostrarUsuarios.lblBApellid.setText(empleadosM.get(i).getApellido());
+							vista.mostrarUsuarios.lblBDepat.setText(Integer.toString(empleadosM.get(i).getCod_dept()));
+							vista.mostrarUsuarios.lblBCargo.setText(empleadosM.get(i).getPuesto());
+							vista.mostrarUsuarios.lblBJefe.setText(Integer.toString(empleadosM.get(i).getBoss()));
+							vista.mostrarUsuarios.btnSiguiente.setEnabled(true);						
 						}else {
 							vista.mostrarUsuarios.btnAnterior.setEnabled(false);
 						}

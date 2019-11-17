@@ -40,7 +40,7 @@ public class controladorCrearUsuario{
 			Object sourceObject = e.getSource();
 			Conexion c = new Conexion();
 			Consultas consult = new Consultas(c);
-			Object [] lista=new Object[5];
+			ArrayList<Empleado>lista=new ArrayList<Empleado>();
 			int contador=0;
 			ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 			Empleado emple = new Empleado();
@@ -51,9 +51,9 @@ public class controladorCrearUsuario{
 				
 				switch(botonPulsado) {
 				case "GUARDAR":
-					lista=consult.comparar("'ID'");
-					for(int i=0; i<lista.length ; i++) {
-						if(lista[i]==vista.crearUsuario.textCodEmple.getText()) {
+					lista=consult.comparar("2");
+					for(int i=0; i<lista.size() ; i++) {
+						if(Integer.toString(lista.get(i).getId())==vista.crearUsuario.textCodEmple.getText()) {
 							contador++;
 							System.out.println("NO DEBERIA METERSE");
 						}

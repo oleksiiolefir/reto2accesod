@@ -49,7 +49,7 @@ public class ConsultarUsuario extends JPanel {
 		rdbtnNombre = new JRadioButton("Nombre");
 		rdbtnNombre.setBounds(6, 156, 157, 23);
 		add(rdbtnNombre);
-		
+
 		lblSeleccionaTexto = new JLabel("<html><body>Selecciona una de las dos opciones para una busqueda filtrada, en el caso de no escoger ninguna opci\u00F3n se buscar\u00E1n todos los empleados.</body></html>");
 		lblSeleccionaTexto.setBounds(6, 26, 370, 50);
 		add(lblSeleccionaTexto);

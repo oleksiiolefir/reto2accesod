@@ -30,7 +30,7 @@ public class controladorConsultarUsu{
 		vista.consultarUsuario.btnAtras.addActionListener(new BotonListener());
 		vista.consultarUsuario.btnBuscar.addActionListener(new BotonListener());
 	}	
-	
+
 	private class BotonListener implements ActionListener {
 
 		@Override
@@ -39,7 +39,7 @@ public class controladorConsultarUsu{
 			Object sourceObject = e.getSource();
 			Conexion c = new Conexion();
 			Consultas consult = new Consultas(c);
-		
+
 			if (sourceObject instanceof JButton) {
 				
 				String botonPulsado = ((JButton) sourceObject).getActionCommand();
@@ -58,6 +58,7 @@ public class controladorConsultarUsu{
 	    				lista=consult.compararNombre(vista.consultarUsuario.textNombre.getText());
 	    				for(int n=0; n<lista.size() ; n++) {
 	    					if(lista.get(n).getNombre()==vista.consultarUsuario.textNombre.getText()) {
+
 	    						vista.consultarUsuario.rdbtnCodEmple.setSelected(false);
 	    					}
 	    				}	
@@ -82,3 +83,5 @@ public class controladorConsultarUsu{
 		}
 	}
 }
+
+

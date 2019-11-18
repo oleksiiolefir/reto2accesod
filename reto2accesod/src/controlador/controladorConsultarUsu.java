@@ -39,9 +39,7 @@ public class controladorConsultarUsu{
 		public void actionPerformed(ActionEvent e) {
 			
 			Object sourceObject = e.getSource();
-			Conexion c = new Conexion(modelo);
-			Consultas consult = new Consultas(c);
-
+		
 			if (sourceObject instanceof JButton) {
 				
 				String botonPulsado = ((JButton) sourceObject).getActionCommand();
@@ -51,13 +49,13 @@ public class controladorConsultarUsu{
 					vista.cardLayout.show(vista.contentPane, "7");
 					if(vista.consultarUsuario.rdbtnCodEmple.isSelected()) {
 						System.out.println("sOY UN ID QUE EXISTE");
-	                	lista=consult.comparar(vista.consultarUsuario.textCodEmple.getText());
+	                	lista=modelo.consultas.comparar(vista.consultarUsuario.textCodEmple.getText());
 	    				for(int n=0; n<lista.size() ; n++) {	    						
 	    					vista.consultarUsuario.rdbtnNombre.setSelected(false);
 	    				}
 					}
 	    			else if(vista.consultarUsuario.rdbtnNombre.isSelected()) {
-	    				lista=consult.compararNombre(vista.consultarUsuario.textNombre.getText());
+	    				lista=modelo.consultas.compararNombre(vista.consultarUsuario.textNombre.getText());
 	    				for(int n=0; n<lista.size() ; n++) {
 	    					if(lista.get(n).getNombre()==vista.consultarUsuario.textNombre.getText()) {
 
@@ -65,7 +63,7 @@ public class controladorConsultarUsu{
 	    					}
 	    				}	
 	    			}else {
-	    				lista=consult.compararTodo();
+	    				lista=modelo.consultas.compararTodo();
 	    			}
 					vista.mostrarUsuarios.lblBCod.setText(Integer.toString(lista.get(0).getId()));
 					vista.mostrarUsuarios.lblBNombre.setText(lista.get(0).getNombre());

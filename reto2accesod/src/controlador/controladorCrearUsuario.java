@@ -86,7 +86,7 @@ public class controladorCrearUsuario{
 							} catch (SQLException e1) {
 								JOptionPane.showMessageDialog(null,"Error al guardar el empleado","Error",JOptionPane.INFORMATION_MESSAGE);
 								e1.printStackTrace();
-								modelo.escrituraLog.crearLog(new Date(), e1.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+								modelo.escrituraLog.crearLog(e1.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
 							}
 						}					
 					}else {

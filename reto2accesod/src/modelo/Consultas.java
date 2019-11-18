@@ -33,7 +33,7 @@ public class Consultas {
 			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			} catch (SQLException e) {
 			    e.printStackTrace();
-			    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+			    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
 	        	
 			} 
 			finally {
@@ -42,7 +42,7 @@ public class Consultas {
 			    } 
 			    catch (Exception e) {
 				e.printStackTrace();
-				EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+				EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
 	        	
 			    }
 			}
@@ -82,7 +82,7 @@ public class Consultas {
 
 			} catch (SQLException e) {
 			    e.printStackTrace();
-			    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName()); 	
+			    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName()); 	
 			} 
 			finally {
 			    try {
@@ -90,7 +90,7 @@ public class Consultas {
 			    } 
 			    catch (Exception e) {
 				e.printStackTrace();
-				EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());      	
+				EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());      	
 			    }
 			}
 			
@@ -133,7 +133,7 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
-		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+		    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
         	
 		} finally {
 		    // cerramos la conexion
@@ -178,7 +178,7 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
-		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+		    EscrituraLog.crearLog(e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
         	
 		} finally {
 		    // cerramos la conexion
@@ -223,7 +223,7 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
-		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+		    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
         	
 		} finally {
 		    // cerramos la conexion

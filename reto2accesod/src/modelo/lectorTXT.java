@@ -75,7 +75,7 @@ public class lectorTXT {
 	                 }               
 	             }
 	        } catch (Exception ex) {
-	        	EscrituraLog.crearLog(new Date(), ex.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+	        	EscrituraLog.crearLog(ex.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
 	        	seguir=false;	            
 	        }
         }

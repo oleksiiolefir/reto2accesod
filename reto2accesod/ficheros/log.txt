@@ -1,1 +1,0 @@
-https://examples.javacodegeeks.com/core-java/util/logging/java-util-logging-example/Fecha: Mon Nov 18 14:00:50 CET 2019 *** La clase es : modelo.lectorTXT$2 *** El metodo es : lecturaTXT *** el motivo por el cual ocurre el  error: java.lang.NumberFormatException: For input string: "null1"

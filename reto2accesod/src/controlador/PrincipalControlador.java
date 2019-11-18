@@ -2,6 +2,11 @@ package controlador;
 
 import modelo.Conexion;
 import modelo.PrincipalModelo;
+<<<<<<< HEAD
+=======
+import vista.ConsultarUsuario;
+import vista.CrearDepartamentos;
+>>>>>>> 57067dbb3c2c87e684a43749f920f9a969fafa0e
 import vista.JframePrincipal;
 
 public class PrincipalControlador {
@@ -22,10 +27,13 @@ public class PrincipalControlador {
     public controladorMenuEmple controladorMenuEmple;   
 
     public controladorMostrarUsu controladorMostrarUsu;
+<<<<<<< HEAD
     public controladorMostrarDepartamentos controladorMostrarDepartamentos;
 
 
 
+=======
+>>>>>>> 57067dbb3c2c87e684a43749f920f9a969fafa0e
     
     /**
      * Constructor del PrincipalControlador
@@ -57,6 +65,13 @@ public class PrincipalControlador {
     	// añadimos listeners a los botones del panel CrearUsuario
     	controladorCrearUsuario = new controladorCrearUsuario(vista,this,modelo);
     	// añadimos listeners a los botones del panel ConsultarUsu
+<<<<<<< HEAD
+=======
+    	controladorConsultarUsu = new controladorConsultarUsu(vista,this,modelo);
+    	// añadimos listeners a los botones del panel ConsultarUsu
+    	controladorMostrarUsu = new controladorMostrarUsu(vista,this);
+    	
+>>>>>>> 57067dbb3c2c87e684a43749f920f9a969fafa0e
     	
     	controladorConsultarUsu = new controladorConsultarUsu(vista,this,modelo);
     	// añadimos listeners a los botones del panel ConsultarUsu

@@ -31,5 +31,4 @@ public class MenuEmple extends JPanel {
 		add(btnGenerarPdfEmpleados);
 		btnAtras.setVisible(true);
 	}
-
 }

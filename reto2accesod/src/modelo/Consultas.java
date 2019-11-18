@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 
 import vista.Departamentos;
 
@@ -13,7 +14,7 @@ public class Consultas {
 
 	 private Conexion conexion;
 	 private Connection connection;
-	    
+	 private PrincipalModelo modelo;
 	    
 	 public Consultas(Conexion conexion) {
 	    this.conexion = conexion;
@@ -34,6 +35,8 @@ public class Consultas {
 			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			} catch (SQLException e) {
 			    e.printStackTrace();
+			    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+	        	
 			} 
 			finally {
 			    try {
@@ -41,6 +44,8 @@ public class Consultas {
 			    } 
 			    catch (Exception e) {
 				e.printStackTrace();
+				EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+	        	
 			    }
 			}
 			 
@@ -52,87 +57,48 @@ public class Consultas {
 	 
 	 //METER POR PARAMETRO EL OBJETO DE Empleado
 	
-	 public Object [] comparar1(String variable) {
-			Object [] lista=new Object[5];
-			int contador = 0;
-
-			PreparedStatement ps = null;
-			ResultSet rs = null;
-			String query = "SELECT " + variable + " FROM `empleado`";
-
+	public void insertarEmpleados(ArrayList<Empleado> emple) throws SQLException {
+		  for (int i = 0; i < emple.size(); ++i) {					    
+			    
+		   
+			PreparedStatement stmt = null;
+			
+			
+			String query;
+			
+			query = "INSERT INTO empleado (ID, NOMBRE, APELLIDOS, SUELDO, BOSS,COD_DEPT,JEFE, PUESTO) VALUES ('"+emple.get(i).getId()+"','"+emple.get(i).getNombre()+"',"
+					+ "'"+emple.get(i).getApellido()+"', '"+emple.get(i).getSueldo()+"','"+ emple.get(i).getBoss()+"', '"+ emple.get(i).getCod_dept()+"',"
+							+ "'"+ 0+"', '"+ emple.get(i).getPuesto()+"')";
+	
 			try {
-			    // Abrimos una conexion
+
+			    // abrimos una conexion
 			    connection = conexion.conectar();
-
-			    // preparamos la consulta SQL a la base de datos
-			    ps = connection.prepareStatement(query);
-
+			    stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+			    // preparamos la consulta INSERT
+			    
+			    // añadimos los valores a insertar
+			    stmt.executeUpdate();
 			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
-			    rs = ps.executeQuery();
+			   
 
-			    // crea objetos Linea con los resultados y los añade a un arrayList
-			    while (rs.next()) {
-			    	lista[contador]=rs;
-			    	contador++;
-			    }
 			} catch (SQLException e) {
 			    e.printStackTrace();
-			} finally {
-			    // cerramos la conexion
-			    conexion.desconectar();
+			    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName()); 	
+			} 
+			finally {
+			    try {
+			    	
+			    } 
+			    catch (Exception e) {
+				e.printStackTrace();
+				EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());      	
+			    }
 			}
-
-			return lista;
-		    }
-		public void insertarEmpleados(ArrayList<Empleado> emple) throws SQLException {
-			  for (int i = 0; i < emple.size(); ++i) {					    
-				    
-			   
-				PreparedStatement stmt = null;
-				
-				
-				String query;
-				
-				query = "INSERT INTO empleado (ID, NOMBRE, APELLIDOS, SUELDO, BOSS,COD_DEPT,JEFE, PUESTO) VALUES ('"+emple.get(i).getId()+"','"+emple.get(i).getNombre()+"',"
-						+ "'"+emple.get(i).getApellido()+"', '"+emple.get(i).getSueldo()+"','"+ emple.get(i).getBoss()+"', '"+ emple.get(i).getCod_dept()+"',"
-								+ "'"+ 0+"', '"+ emple.get(i).getPuesto()+"')";
-		
-			/*	stmt.setInt(1, emple.get(i).getId());
-			    stmt.setString(2,emple.get(i).getNombre());
-			    stmt.setString(3, emple.get(i).getApellido());
-			    stmt.setInt(4, emple.get(i).getSueldo());
-			    stmt.setInt(5, emple.get(i).getBoss());
-			    stmt.setInt(6, emple.get(i).getCod_dept());
-			    stmt.setBoolean(7, emple.get(i).getJefe());
-			    stmt.setString(8, emple.get(i).getPuesto());*/
-				try {
-
-				    // abrimos una conexion
-				    connection = conexion.conectar();
-				    stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-				    // preparamos la consulta INSERT
-				    
-				    // añadimos los valores a insertar
-				    stmt.executeUpdate();
-				    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
-				   
-
-				} catch (SQLException e) {
-				    e.printStackTrace();
-				} 
-				finally {
-				    try {
-				    	
-				    } 
-				    catch (Exception e) {
-					e.printStackTrace();
-				    }
-				}
-				
-			  }
-			  connection.close();
-		 }
-	
+			
+		  }
+		  connection.close();
+	 }
 	public ArrayList<Departamento> compararDepart(String variable) {
 		ArrayList<Departamento> Depard = new ArrayList<Departamento>();
 		Departamento Depart;
@@ -249,7 +215,10 @@ public class Consultas {
 	    }
 	
 	
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 57067dbb3c2c87e684a43749f920f9a969fafa0e
 	public ArrayList<Empleado> comparar(String variable) {
 		ArrayList<Empleado> emplead = new ArrayList<Empleado>();
     	Empleado emple;
@@ -285,17 +254,25 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
+
+		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+        	
+
 		} finally {
 		    // cerramos la conexion
 		    conexion.desconectar();
 		}
 
+
 		return emplead;
 	    }
+	
+	
 	
 	public ArrayList<Empleado> compararNombre(String variable) {
 		ArrayList<Empleado> emplead = new ArrayList<Empleado>();
     	Empleado emple;
+
 
 		int contador = 0;
 
@@ -328,6 +305,9 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
+
+		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+
 		} finally {
 		    // cerramos la conexion
 		    conexion.desconectar();
@@ -371,6 +351,8 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
+		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+        	
 		} finally {
 		    // cerramos la conexion
 		    conexion.desconectar();

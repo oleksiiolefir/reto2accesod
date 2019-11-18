@@ -15,8 +15,14 @@ import vista.JframePrincipal;
 public class controladorConsultarUsu{
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
+<<<<<<< HEAD
 	ArrayList<Empleado>lista=new ArrayList<Empleado>();
 	private PrincipalModelo modelo;
+=======
+	private PrincipalModelo modelo;
+	ArrayList<Empleado>lista=new ArrayList<Empleado>();
+	
+>>>>>>> 57067dbb3c2c87e684a43749f920f9a969fafa0e
 	public controladorConsultarUsu(JframePrincipal vista, PrincipalControlador controlador,PrincipalModelo modelo) {
 		this.vista = vista;
 		this.controlador = controlador;

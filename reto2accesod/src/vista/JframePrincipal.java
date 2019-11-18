@@ -23,9 +23,11 @@ public class JframePrincipal extends JFrame {
 	public MenuEmple menuEmple;
 	public CrearUsuario crearUsuario;
 	public CrearDepartamentos crearDepartamentos;
+
 	public Departamentos Departamentos;
 	public verDepartamentos verDepartamentos;
 	public MostrarDepartamentos mostrarDepartamentos;
+
 
 	/**
 	 * Create the frame.
@@ -58,9 +60,11 @@ public class JframePrincipal extends JFrame {
 		contentPane.add(crearDepartamentos, "5");
 		contentPane.add(consultarUsuario, "6");
 		contentPane.add(mostrarUsuarios, "7");
+
 		contentPane.add(Departamentos, "8");
 		contentPane.add(verDepartamentos, "9");
 		contentPane.add(mostrarDepartamentos, "10");
+
 		setVisible(true);
 
 	}

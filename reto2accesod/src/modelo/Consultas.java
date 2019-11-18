@@ -215,10 +215,7 @@ public class Consultas {
 	    }
 	
 	
-<<<<<<< HEAD
-	
-=======
->>>>>>> 57067dbb3c2c87e684a43749f920f9a969fafa0e
+
 	public ArrayList<Empleado> comparar(String variable) {
 		ArrayList<Empleado> emplead = new ArrayList<Empleado>();
     	Empleado emple;
@@ -255,7 +252,8 @@ public class Consultas {
 		} catch (SQLException e) {
 		    e.printStackTrace();
 
-		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+		    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+
         	
 
 		} finally {
@@ -305,8 +303,8 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
-
-		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+   EscrituraLog.crearLog(e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+        	
 
 		} finally {
 		    // cerramos la conexion
@@ -351,7 +349,7 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
-		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+		    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
         	
 		} finally {
 		    // cerramos la conexion

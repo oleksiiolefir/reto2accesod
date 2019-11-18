@@ -12,8 +12,9 @@ public class PrincipalModelo {
 	
 	
 	public PrincipalModelo() {
-		// creamos un objeto BBDD que se encargara de conectarse a la BBDD
 
+		
+		// creamos un objeto BBDD que se encargara de conectarse a la BBDD
 		conexion = new Conexion(this);
 
 			

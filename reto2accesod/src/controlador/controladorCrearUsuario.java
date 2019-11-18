@@ -19,13 +19,10 @@ public class controladorCrearUsuario{
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
 	private PrincipalModelo modelo;
-<<<<<<< HEAD
-	public controladorCrearUsuario(JframePrincipal vista, PrincipalControlador controlador,	 PrincipalModelo modelo)
- {
-=======
+
 	
 	public controladorCrearUsuario(JframePrincipal vista, PrincipalControlador controlador, PrincipalModelo modelo) {
->>>>>>> 57067dbb3c2c87e684a43749f920f9a969fafa0e
+
 		this.vista = vista;
 		this.controlador = controlador;
 		this.modelo = modelo;
@@ -91,10 +88,9 @@ public class controladorCrearUsuario{
 							} catch (SQLException e1) {
 								JOptionPane.showMessageDialog(null,"Error al guardar el empleado","Error",JOptionPane.INFORMATION_MESSAGE);
 								e1.printStackTrace();
-<<<<<<< HEAD
-=======
-								modelo.escrituraLog.crearLog(new Date(), e1.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
->>>>>>> 57067dbb3c2c87e684a43749f920f9a969fafa0e
+
+								modelo.escrituraLog.crearLog(e1.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+
 							}
 						}					
 					}else {

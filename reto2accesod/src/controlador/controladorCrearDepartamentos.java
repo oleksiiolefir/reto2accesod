@@ -48,7 +48,6 @@ public class controladorCrearDepartamentos    {
 			
 			Object sourceObject = e.getSource();
 			
-			Object [] lista=new Object[3];
 			int contador=0;
 			ArrayList<Departamento> Departamento = new ArrayList<Departamento>();
 			Departamento depart = new Departamento();
@@ -59,9 +58,9 @@ public class controladorCrearDepartamentos    {
 				switch (botonPulsado) {
 				case "Crear":
 					
-					lista=modelo.consultas.comparar1("'ID'");
-					for(int i=0; i<lista.length ; i++) {
-						if(lista[i]==vista.crearDepartamentos.textField.getText()) {
+					Departamento=modelo.consultas.compararDepart("'ID'");
+					for(int i=0; i<Departamento.size() ; i++) {
+						if(Departamento.get(i).getCod_dept()==Integer.valueOf(vista.crearDepartamentos.textField.getText())) {
 							contador++;
 							System.out.println("NO DEBERIA METERSE");
 						}

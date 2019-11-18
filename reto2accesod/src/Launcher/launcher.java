@@ -2,7 +2,10 @@ package Launcher;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import controlador.PrincipalControlador;
 import modelo.Conexion;
@@ -31,8 +34,8 @@ public class launcher {
 		c.conectar();
 
 		Consultas consult = new Consultas(c);
-
-
+		
+	
 		departamentos=lecturaCSV.funcionesDeLectorCsv();
 
 		empleados = lectorTXT.lecturaTXT();	

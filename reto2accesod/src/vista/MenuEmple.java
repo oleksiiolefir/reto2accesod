@@ -4,7 +4,7 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 
 public class MenuEmple extends JPanel {
-	public JButton btnCrearUsu, btnConsultarUsu, btnAtras;
+	public JButton btnCrearUsu, btnConsultarUsu, btnAtras, btnGenerarPdfEmpleados;
 	
 	/**
 	 * Create the panel.
@@ -25,7 +25,10 @@ public class MenuEmple extends JPanel {
 		btnAtras = new JButton("Atras");
 		btnAtras.setBounds(351, 266, 89, 23);
 		add(btnAtras);
+		
+		btnGenerarPdfEmpleados = new JButton("<html><body>Generar PDF Empleados</body></html>");
+		btnGenerarPdfEmpleados.setBounds(10, 63, 97, 143);
+		add(btnGenerarPdfEmpleados);
 		btnAtras.setVisible(true);
 	}
-
 }

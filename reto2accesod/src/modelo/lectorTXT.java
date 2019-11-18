@@ -24,8 +24,8 @@ public class lectorTXT {
         // s1 será la primera línea
         s1 = br.readLine(); 
         ArrayList<Empleado> empleados = new ArrayList<Empleado>();
-        boolean macarrones=true;
-        while(macarrones) {
+        boolean seguir=true;
+        while(seguir) {
 	        try {
 	        	 int numTokens = 0;
 	             s1=br.readLine();
@@ -74,7 +74,7 @@ public class lectorTXT {
 	                 }               
 	             }
 	        } catch (Exception ex) {
-	        	macarrones=false;	            
+	        	seguir=false;	            
 	        }
         }
         return empleados;

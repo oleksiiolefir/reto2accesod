@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import modelo.Conexion;
 import modelo.Consultas;
 import modelo.Departamento;
+import modelo.PrincipalModelo;
 import vista.Departamentos;
 import vista.JframePrincipal;
 
@@ -16,7 +17,8 @@ public class controladorVerDepartamentos {
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
 	ArrayList<Departamento> lista=new ArrayList<Departamento>();
-	
+	private PrincipalModelo modelo;
+
 	public controladorVerDepartamentos(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
 		this.controlador = controlador;
@@ -38,8 +40,7 @@ public class controladorVerDepartamentos {
 		public void actionPerformed(ActionEvent e) {
 			
 			Object sourceObject = e.getSource();
-			Conexion c = new Conexion();
-			Consultas consult = new Consultas(c);
+		
 
 			if (sourceObject instanceof JButton) {
 				
@@ -50,13 +51,13 @@ public class controladorVerDepartamentos {
 					vista.cardLayout.show(vista.contentPane, "10");
 					if(vista.verDepartamentos.rdbtnCodDepart.isSelected()) {
 						System.out.println("SOY UN ID QUE EXISTE");
-	                	lista=consult.compararDepart(vista.verDepartamentos.textCodDepart.getText());
+	                	lista=modelo.consultas.compararDepart(vista.verDepartamentos.textCodDepart.getText());
 	    				for(int n=0; n<lista.size() ; n++) {	    						
 	    					vista.verDepartamentos.rdbtnNombre.setSelected(false);
 	    				}
 					}
 	    			else if(vista.verDepartamentos.rdbtnNombre.isSelected()) {
-	    				lista=consult.compararDepartNombre(vista.verDepartamentos.textNombre.getText());
+	    				lista=modelo.consultas.compararDepartNombre(vista.verDepartamentos.textNombre.getText());
 	    				for(int n=0; n<lista.size() ; n++) {
 	    					if(lista.get(n).getDnombre()==vista.verDepartamentos.textNombre.getText()) {
 
@@ -64,7 +65,7 @@ public class controladorVerDepartamentos {
 	    					}
 	    				}	
 	    			}else {
-	    				lista=consult.compararDepartTodo();
+	    				lista=modelo.consultas.compararDepartTodo();
 	    			}
 					vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(lista.get(0).getCod_dept()));
 					vista.mostrarDepartamentos.lblBNombre.setText(lista.get(0).getDnombre());

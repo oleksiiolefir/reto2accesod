@@ -13,21 +13,22 @@ import java.util.Vector;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.text.View;
-
 import modelo.Conexion;
 import modelo.Consultas;
 import modelo.Departamento;
 import modelo.Empleado;
+import modelo.PrincipalModelo;
 import vista.JframePrincipal;
 
 public class controladorCrearDepartamentos    {
 	public JframePrincipal vista;
 	public PrincipalControlador controlador;
+	public PrincipalModelo modelo;
 
-	public controladorCrearDepartamentos(JframePrincipal vista, PrincipalControlador controlador) {
+	public controladorCrearDepartamentos(JframePrincipal vista, PrincipalControlador controlador,PrincipalModelo modelo) {
 		this.vista = vista;
 		this.controlador = controlador;		
-		
+		this.modelo = modelo;	
 		initListeners();
 	}	
 	
@@ -46,8 +47,7 @@ public class controladorCrearDepartamentos    {
 		public void actionPerformed(ActionEvent e) {
 			
 			Object sourceObject = e.getSource();
-			Conexion c = new Conexion();
-			Consultas consult = new Consultas(c);
+			
 			Object [] lista=new Object[3];
 			int contador=0;
 			ArrayList<Departamento> Departamento = new ArrayList<Departamento>();
@@ -59,7 +59,7 @@ public class controladorCrearDepartamentos    {
 				switch (botonPulsado) {
 				case "Crear":
 					
-					lista=consult.comparar1("'ID'");
+					lista=modelo.consultas.comparar1("'ID'");
 					for(int i=0; i<lista.length ; i++) {
 						if(lista[i]==vista.crearDepartamentos.textField.getText()) {
 							contador++;
@@ -78,7 +78,7 @@ public class controladorCrearDepartamentos    {
 							
 							try {
 								System.out.println("SE METE EN EL TRY");
-								consult.insertarDepartamentos(Departamento);
+								modelo.consultas.insertarDepartamentos(Departamento);
 							} catch (SQLException e1) {
 								JOptionPane.showMessageDialog(null,"Error al guardar el Departamento","Error",JOptionPane.INFORMATION_MESSAGE);
 								e1.printStackTrace();

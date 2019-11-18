@@ -12,6 +12,7 @@ public class controladorJframe {
 	
 	public controladorJframe(JframePrincipal vista) {
 		this.vista = vista;
+		addListeners();
 	}
 	
 	/**

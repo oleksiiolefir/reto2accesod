@@ -2,59 +2,46 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import java.awt.EventQueue;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import vista.JframePrincipal;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
-import vista.CrearDepartamentos;
-import vista.verDepartamentos;
-
-import javax.swing.JButton;
-import java.awt.event.*;
-public class controladorDepartamentos implements ActionListener{
+public class controladorDepartamentos {
+	private JframePrincipal vista;
+	private PrincipalControlador controlador;
 	
+public controladorDepartamentos(JframePrincipal vista, PrincipalControlador controlador) {
+	this.vista = vista;
+	this.controlador = controlador;
+	initListeners();
+}
 
-	
+/**
+ * Se crean los listeners del panel
+ */
+public void initListeners() {
+	vista.Departamentos.btnCrearDepart.addActionListener(new BotonListener());
+	vista.Departamentos.btnConsultarDept.addActionListener(new BotonListener());
+	vista.Departamentos.btnAtras.addActionListener(new BotonListener());
+}
 
-	
+private class BotonListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-Object sourceObject = e.getSource();
+		String botonPulsado = e.getActionCommand();
+		switch (botonPulsado) {
+		case "Crear Nuevo Departamento":
+			vista.cardLayout.show(vista.contentPane, "5");
+			break;
+		case "Consultar Departamentos":
+			vista.cardLayout.show(vista.contentPane, "9");
+			break;
 		
-		if (sourceObject instanceof JButton) {
-			
-			String botonPulsado = ((JButton) sourceObject).getActionCommand();
-		   
-			// comprobamos que boton se ha pulsado y ejecutamos sus acciones
-			switch (botonPulsado) {
-				case "Crear Departamentos":	
-					 
-				
-					CrearDepartamentos CrearDepartamentos=new CrearDepartamentos(); 
-					CrearDepartamentos.setVisible(true); 
-
-					
-					break;
-				
-			
-				case "Ver Departementos":
-					verDepartamentos verDepartamentos=new verDepartamentos(); 
-					verDepartamentos.setVisible(true); 
-
-					break;
-					
-				
-			}
-			
-
-			} 
+		case "Atras":
+			vista.cardLayout.show(vista.contentPane, "8");
+			break;
+		}
 	}
-
+			
+}
 }

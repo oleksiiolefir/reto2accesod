@@ -33,7 +33,7 @@ public class controladorMenuEmple {
 				vista.cardLayout.show(vista.contentPane, "4");
 				break;
 			case "Consultar Usuarios":
-				
+				vista.cardLayout.show(vista.contentPane, "6");
 				break;
 			
 			case "Atras":

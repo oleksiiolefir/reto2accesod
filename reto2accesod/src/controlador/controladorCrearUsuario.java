@@ -13,69 +13,89 @@ import modelo.Conexion;
 import modelo.Consultas;
 import modelo.Empleado;
 
-public class controladorCrearUsuario implements ActionListener{
+public class controladorCrearUsuario{
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
 	
 	public controladorCrearUsuario(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
 		this.controlador = controlador;
+		
+		initListeners();
 	}
 	
 	/**
 	 * Se crean los listeners del panel
 	 */
-	public void addListeners() {
-		vista.crearUsuario.btnAgregar.addActionListener(this);
+	public void initListeners() {
+		vista.crearUsuario.btnAgregar.addActionListener(new BotonListener());
+		vista.crearUsuario.btnPrueba.addActionListener(new BotonListener());				
+	}	
 
-	 /**
-	 * Acción de los distintos listeners
-	 */
-	public void actionPerformed(ActionEvent e) {
-		
-		Object sourceObject = e.getSource();
-		Conexion c = new Conexion();
-		Consultas consult = new Consultas(c);
-		Object [] lista=new Object[5];
-		int contador=0;
-		ArrayList<Empleado> empleados = new ArrayList<Empleado>();
-		
-		if (sourceObject instanceof JButton) {
+	private class BotonListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
 			
-			String botonPulsado = ((JButton) sourceObject).getActionCommand();
+			Object sourceObject = e.getSource();
+			Conexion c = new Conexion();
+			Consultas consult = new Consultas(c);
+			ArrayList<Empleado>lista=new ArrayList<Empleado>();
+			int contador=0;
+			ArrayList<Empleado> empleados = new ArrayList<Empleado>();
+			Empleado emple = new Empleado();
 			
-			switch(botonPulsado) {
-			case "GUARDAR":
-				lista=consult.compararId();
-				for(int i=0; i<lista.length ; i++) {
-					if(lista[i]==vista.crearUsuario.textCodEmple.getText()) {
-						contador++;
-					}
-				}
-				if(contador==0) {
-					if(modelo.comprobador.datosCorrectosCodEmple(vista.crearUsuario)==true &&
-							modelo.comprobador.datosCorrectosSueldo(vista.crearUsuario)==true &&
-							modelo.comprobador.datosCorrectosDepart(vista.crearUsuario)==true) {
-						try {
-							consult.insertarEmpleados(empleados);
-						} catch (SQLException e1) {
-							JOptionPane.showMessageDialog(null,"Error al guardar el empleado","Error",JOptionPane.INFORMATION_MESSAGE);
-							e1.printStackTrace();
+			if (sourceObject instanceof JButton) {
+				
+				String botonPulsado = ((JButton) sourceObject).getActionCommand();
+				
+				switch(botonPulsado) {
+				case "GUARDAR":
+					lista=consult.comparar("2");
+					for(int i=0; i<lista.size() ; i++) {
+						if(Integer.toString(lista.get(i).getId())==vista.crearUsuario.textCodEmple.getText()) {
+							contador++;
+							System.out.println("NO DEBERIA METERSE");
 						}
-						vista.menu.setVisible(true);
-						vista.bienvenida.setVisible(false);
-					}					
-				}else {
-					JOptionPane.showMessageDialog(null,"Ya existe un usuario con ese ID","Error",JOptionPane.INFORMATION_MESSAGE);
-				}				
-				
-				break;
-			case "prueba":
-				
-				break;
+					}
+					if(contador==0) {
+						if(modelo.comprobador.datosCorrectosCodEmple(vista.crearUsuario)==true &&
+								modelo.comprobador.datosCorrectosSueldo(vista.crearUsuario)==true &&
+								modelo.comprobador.datosCorrectosDepart(vista.crearUsuario)==true) {
+							emple.setId(Integer.parseInt(vista.crearUsuario.textCodEmple.getText()));
+							emple.setNombre(vista.crearUsuario.textNombre.getText());
+							emple.setApellido(vista.crearUsuario.textApellido.getText());
+							emple.setSueldo(Integer.parseInt(vista.crearUsuario.textSueldo.getText()));
+							emple.setCod_dept(Integer.parseInt(vista.crearUsuario.textDept.getText()));
+							emple.setPuesto(vista.crearUsuario.textCargo.getText());
+							if(vista.crearUsuario.comboBoxCargo.getSelectedIndex()==1) {
+								emple.setJefe(true);
+							}else {
+								emple.setJefe(false);
+							}
+							emple.setBoss(Integer.parseInt(vista.crearUsuario.textJefe.getText()));
+							
+							empleados.add(0, emple);
+							
+							try {
+								System.out.println("SE METE EN EL TRY");
+								consult.insertarEmpleados(empleados);
+							} catch (SQLException e1) {
+								JOptionPane.showMessageDialog(null,"Error al guardar el empleado","Error",JOptionPane.INFORMATION_MESSAGE);
+								e1.printStackTrace();
+							}
+						}					
+					}else {
+						JOptionPane.showMessageDialog(null,"Ya existe un usuario con ese ID","Error",JOptionPane.INFORMATION_MESSAGE);
+					}				
+					
+					break;
+				case "prueba":
+					vista.cardLayout.show(vista.contentPane, "2");
+					break;
+				}
 			}
 		}
+	
 	}
-	
-	
 }

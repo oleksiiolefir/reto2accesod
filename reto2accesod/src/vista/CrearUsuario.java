@@ -9,7 +9,6 @@ import javax.swing.DefaultComboBoxModel;
 
 public class CrearUsuario extends JPanel {
 
-
 	public JTextField textCodEmple, textNombre, textApellido, textSueldo, textDept, textCargo, textConCargo, textJefe;
 
 	public JLabel lbCodEmple, lbNombre, lbApellido, lbSueldo, lbDept, lbCargo, lbConCargo, lbJefe;

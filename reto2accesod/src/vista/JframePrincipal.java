@@ -12,6 +12,10 @@ import java.awt.event.ActionEvent;
 
 public class JframePrincipal extends JFrame {
 
+		
+	//atributos
+	public ConsultarUsuario consultarUsuario;
+	public MostrarUsuarios mostrarUsuarios;
 	public JPanel contentPane;
 	public Bienvenida bienvenida;
 	public CardLayout cardLayout;
@@ -19,6 +23,10 @@ public class JframePrincipal extends JFrame {
 	public MenuEmple menuEmple;
 	public CrearUsuario crearUsuario;
 	public CrearDepartamentos crearDepartamentos;
+	public Departamentos Departamentos;
+	public verDepartamentos verDepartamentos;
+	public MostrarDepartamentos mostrarDepartamentos;
+
 	/**
 	 * Create the frame.
 	 */
@@ -35,14 +43,24 @@ public class JframePrincipal extends JFrame {
 		menu = new Menu();
 		menuEmple = new MenuEmple();
 		crearUsuario = new CrearUsuario();
-
+		consultarUsuario = new ConsultarUsuario();
+		mostrarUsuarios = new MostrarUsuarios();
 		crearDepartamentos = new CrearDepartamentos();
+		Departamentos = new Departamentos();
+		verDepartamentos = new verDepartamentos();
+		mostrarDepartamentos = new MostrarDepartamentos();
+		
 		
 		contentPane.add(bienvenida, "1");
 		contentPane.add(menu, "2");
 		contentPane.add(menuEmple, "3");
 		contentPane.add(crearUsuario, "4");
 		contentPane.add(crearDepartamentos, "5");
+		contentPane.add(consultarUsuario, "6");
+		contentPane.add(mostrarUsuarios, "7");
+		contentPane.add(Departamentos, "8");
+		contentPane.add(verDepartamentos, "9");
+		contentPane.add(mostrarDepartamentos, "10");
 		setVisible(true);
 
 	}

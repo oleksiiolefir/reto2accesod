@@ -1,6 +1,8 @@
 package modelo;
 
 import javax.swing.JOptionPane;
+
+import vista.CrearDepartamentos;
 import vista.CrearUsuario;
 
 
@@ -35,11 +37,12 @@ public class comprobador {
 		}
 		return seguir;
 	}
+
 	
-	public static Boolean datosCorrectosDepart(CrearUsuario panelCrearUsuario) {
+	public static Boolean datosCorrectosDepart(CrearUsuario panelCrearDepart) {
 		Boolean seguir=true;
 		try {
-			int departamento=Integer.parseInt(panelCrearUsuario.textDept.getText());
+			int departamento=Integer.parseInt(panelCrearDepart.textDept.getText());
 			seguir=true;
 		} catch(Exception e) {
 			JOptionPane.showMessageDialog(null,"Solo se admiten valores numéricos","Error",JOptionPane.INFORMATION_MESSAGE);

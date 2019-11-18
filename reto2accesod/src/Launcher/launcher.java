@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.swing.JPanel;
-
 import controlador.PrincipalControlador;
 import modelo.Conexion;
 import modelo.Consultas;
@@ -14,7 +12,6 @@ import modelo.Empleado;
 import modelo.PrincipalModelo;
 import modelo.lectorTXT;
 import modelo.lecturaCSV;
-import vista.CrearDepartamentos;
 import vista.JframePrincipal;
 
 public class launcher {
@@ -42,9 +39,7 @@ public class launcher {
 		
 		
 		consult.insertarEmpleados(empleados);
-
 		consult.insertarDepartamentos(departamentos);	
-
 	}
 
 }

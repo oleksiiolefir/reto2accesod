@@ -1,0 +1,7 @@
+EMPLEADOS
+2;LANDER;CRACKASO;1340;2;10;false;Matematicas
+5;ALOSHA;CRACKASO;1340;2;10;false;Matematicas
+55;Hola;OOO;1250;2;10;false;dgf
+69;zxf;fdg;1200;2;10;false;cdxf
+-----------------------------------------------------------------------
+DEPARTAMENTOS

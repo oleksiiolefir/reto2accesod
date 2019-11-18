@@ -5,7 +5,7 @@ import javax.swing.JButton;
 
 public class Menu extends JPanel {
 	
-	public JButton btnUsuarios,btnDepartamentos;
+	public JButton btnUsuarios,btnDepartamentos, btnGenerarTXT;
 	/**
 	 * Create the panel.
 	 */
@@ -21,6 +21,10 @@ public class Menu extends JPanel {
 		btnDepartamentos.setBounds(79, 216, 263, 48);
 		btnDepartamentos.setActionCommand("DEPARTAMENTOS");
 		add(btnDepartamentos);
+		
+		btnGenerarTXT = new JButton("GENERAR TXT");
+		btnGenerarTXT.setBounds(79, 122, 263, 48);
+		add(btnGenerarTXT);
 
 	}
 }

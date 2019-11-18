@@ -9,6 +9,7 @@ public class PrincipalModelo {
 	public Empleado empleado;
 	public EscrituraLog escrituraLog;
 	public comprobador comprobador;
+	public GenerarTXT generarTXT;
 	
 	
 	public PrincipalModelo() {

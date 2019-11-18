@@ -94,7 +94,7 @@ public class controladorCrearUsuario{
 					}				
 					
 					break;
-				case "prueba":
+				case "ATRAS":
 					vista.cardLayout.show(vista.contentPane, "2");
 					break;
 				}

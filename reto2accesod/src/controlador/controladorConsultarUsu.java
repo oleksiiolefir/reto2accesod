@@ -58,7 +58,6 @@ public class controladorConsultarUsu{
 	    				lista=modelo.consultas.compararNombre(vista.consultarUsuario.textNombre.getText());
 	    				for(int n=0; n<lista.size() ; n++) {
 	    					if(lista.get(n).getNombre()==vista.consultarUsuario.textNombre.getText()) {
-
 	    						vista.consultarUsuario.rdbtnCodEmple.setSelected(false);
 	    					}
 	    				}	
@@ -72,6 +71,7 @@ public class controladorConsultarUsu{
 					vista.mostrarUsuarios.lblBCargo.setText(lista.get(0).getPuesto());
 					vista.mostrarUsuarios.lblBJefe.setText(Integer.toString(lista.get(0).getBoss()));
 					vista.mostrarUsuarios.btnAnterior.setEnabled(false);
+					vista.mostrarUsuarios.btnIrAlPrimero.setEnabled(false);
 					vista.cardLayout.show(vista.contentPane, "7");
 				break;
 				case "ATRAS":

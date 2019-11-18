@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -12,15 +13,17 @@ import vista.JframePrincipal;
 import modelo.Conexion;
 import modelo.Consultas;
 import modelo.Empleado;
+import modelo.PrincipalModelo;
 
 public class controladorCrearUsuario{
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
+	private PrincipalModelo modelo;
 	
-	public controladorCrearUsuario(JframePrincipal vista, PrincipalControlador controlador) {
+	public controladorCrearUsuario(JframePrincipal vista, PrincipalControlador controlador, PrincipalModelo modelo) {
 		this.vista = vista;
 		this.controlador = controlador;
-		
+		this.modelo = modelo;
 		initListeners();
 	}
 	
@@ -38,7 +41,7 @@ public class controladorCrearUsuario{
 		public void actionPerformed(ActionEvent e) {
 			
 			Object sourceObject = e.getSource();
-			Conexion c = new Conexion();
+			Conexion c = new Conexion(modelo);
 			Consultas consult = new Consultas(c);
 			ArrayList<Empleado>lista=new ArrayList<Empleado>();
 			int contador=0;
@@ -83,6 +86,7 @@ public class controladorCrearUsuario{
 							} catch (SQLException e1) {
 								JOptionPane.showMessageDialog(null,"Error al guardar el empleado","Error",JOptionPane.INFORMATION_MESSAGE);
 								e1.printStackTrace();
+								modelo.escrituraLog.crearLog(new Date(), e1.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
 							}
 						}					
 					}else {

@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.StringTokenizer;
 
 
@@ -74,6 +75,7 @@ public class lectorTXT {
 	                 }               
 	             }
 	        } catch (Exception ex) {
+	        	EscrituraLog.crearLog(new Date(), ex.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
 	        	seguir=false;	            
 	        }
         }

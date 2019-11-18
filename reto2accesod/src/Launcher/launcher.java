@@ -26,7 +26,7 @@ public class launcher {
 		PrincipalModelo modelo = new PrincipalModelo();
 		PrincipalControlador controlador = new PrincipalControlador(modelo, vista);
 		
-		Conexion c = new Conexion();
+		Conexion c = new Conexion(modelo);
 
 		c.conectar();
 

@@ -26,7 +26,7 @@ public class controladorDepartamentos implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-Object sourceObject = e.getSource();
+		Object sourceObject = e.getSource();
 		
 		if (sourceObject instanceof JButton) {
 			

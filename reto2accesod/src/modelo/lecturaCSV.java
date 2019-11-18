@@ -40,20 +40,12 @@ public class lecturaCSV {
 		    br = new BufferedReader(new FileReader(csvFile));
 		    while ((line = br.readLine()) != null) {          
 		    	Departamento dept = new Departamento();
-		        String[] datos = line.split(cvsSplitBy);
-		       
-		        System.out.println(datos[0] + ", " + datos[1] + ", " + datos[2] );
-		    
+		        String[] datos = line.split(cvsSplitBy);	       
 		        dept.setCod_dept(Integer.parseInt(datos[0]));
 		        dept.setLugar(datos[1]);
 		        dept.setDnombre(datos[2]);
-		       deptlist.add(i,dept);
-		       System.out.println("la i es " +i);
-		       System.out.println("aaa :"+deptlist.get(i).getCod_dept()+deptlist.get(i).getDnombre()+deptlist.get(i).getLugar());
-		       i++;
-		      
-		       
-		     
+		        deptlist.add(i,dept);      
+		        i++;        
 		    }
 		
 		return deptlist;

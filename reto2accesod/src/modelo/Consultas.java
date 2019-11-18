@@ -6,12 +6,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Consultas {
 
 	 private Conexion conexion;
 	 private Connection connection;
-	    
+	 private PrincipalModelo modelo;
 	    
 	 public Consultas(Conexion conexion) {
 	    this.conexion = conexion;
@@ -32,6 +33,8 @@ public class Consultas {
 			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			} catch (SQLException e) {
 			    e.printStackTrace();
+			    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+	        	
 			} 
 			finally {
 			    try {
@@ -39,6 +42,8 @@ public class Consultas {
 			    } 
 			    catch (Exception e) {
 				e.printStackTrace();
+				EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+	        	
 			    }
 			}
 			 
@@ -63,14 +68,6 @@ public class Consultas {
 					+ "'"+emple.get(i).getApellido()+"', '"+emple.get(i).getSueldo()+"','"+ emple.get(i).getBoss()+"', '"+ emple.get(i).getCod_dept()+"',"
 							+ "'"+ 0+"', '"+ emple.get(i).getPuesto()+"')";
 	
-		/*	stmt.setInt(1, emple.get(i).getId());
-		    stmt.setString(2,emple.get(i).getNombre());
-		    stmt.setString(3, emple.get(i).getApellido());
-		    stmt.setInt(4, emple.get(i).getSueldo());
-		    stmt.setInt(5, emple.get(i).getBoss());
-		    stmt.setInt(6, emple.get(i).getCod_dept());
-		    stmt.setBoolean(7, emple.get(i).getJefe());
-		    stmt.setString(8, emple.get(i).getPuesto());*/
 			try {
 
 			    // abrimos una conexion
@@ -85,6 +82,7 @@ public class Consultas {
 
 			} catch (SQLException e) {
 			    e.printStackTrace();
+			    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName()); 	
 			} 
 			finally {
 			    try {
@@ -92,6 +90,7 @@ public class Consultas {
 			    } 
 			    catch (Exception e) {
 				e.printStackTrace();
+				EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());      	
 			    }
 			}
 			
@@ -134,6 +133,8 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
+		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+        	
 		} finally {
 		    // cerramos la conexion
 		    conexion.desconectar();
@@ -177,6 +178,8 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
+		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+        	
 		} finally {
 		    // cerramos la conexion
 		    conexion.desconectar();
@@ -220,6 +223,8 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
+		    EscrituraLog.crearLog(new Date(), e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+        	
 		} finally {
 		    // cerramos la conexion
 		    conexion.desconectar();

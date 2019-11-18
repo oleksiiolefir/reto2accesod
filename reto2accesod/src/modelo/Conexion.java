@@ -24,13 +24,13 @@ public class Conexion {
 	private String host;
 	private String url;
 	private Connection connection;
-	
+	PrincipalModelo modelo;
 	private final String params = "serverTimezone=UTC"; // https://stackoverflow.com/questions/26515700/mysql-jdbc-driver-5-1-33-time-zone-issue
 	
 	/**
 	 * Constructor de la clase conexion
 	 */
-	public Conexion() {
+	public Conexion(PrincipalModelo modelo) {
 		
 		String[] datos = getConnectionInfo();
 		

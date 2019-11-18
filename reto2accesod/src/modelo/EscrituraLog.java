@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 public class EscrituraLog {
 
-	public void crearLog(Date fecha, String motivo, String metodo, String clase) {
+	public static void crearLog(Date fecha, String motivo, String metodo, String clase) {
 		String ruta = "ficheros" + File.separator + "log.txt"; //Guarda la ruta del fichero
 		FileWriter fichero = null;
 		PrintWriter escritor = null;
@@ -27,7 +27,7 @@ public class EscrituraLog {
 		catch(Exception e){
 			e.printStackTrace();
 		}
-		finally { //Una vez terminado, se cierra el fichero
+		finally {
 			try {
 				fichero.close();
 			}

@@ -9,17 +9,19 @@ import javax.swing.JButton;
 import modelo.Conexion;
 import modelo.Consultas;
 import modelo.Empleado;
+import modelo.PrincipalModelo;
 import vista.JframePrincipal;
 
 public class controladorConsultarUsu{
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
+	private PrincipalModelo modelo;
 	ArrayList<Empleado>lista=new ArrayList<Empleado>();
 	
-	public controladorConsultarUsu(JframePrincipal vista, PrincipalControlador controlador) {
+	public controladorConsultarUsu(JframePrincipal vista, PrincipalControlador controlador,PrincipalModelo modelo) {
 		this.vista = vista;
 		this.controlador = controlador;
-		
+		this.modelo = modelo;
 		initListeners();
 	}
 	
@@ -37,7 +39,7 @@ public class controladorConsultarUsu{
 		public void actionPerformed(ActionEvent e) {
 			
 			Object sourceObject = e.getSource();
-			Conexion c = new Conexion();
+			Conexion c = new Conexion(modelo);
 			Consultas consult = new Consultas(c);
 
 			if (sourceObject instanceof JButton) {

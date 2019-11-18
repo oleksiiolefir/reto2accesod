@@ -33,7 +33,7 @@ public class PrincipalControlador {
     public PrincipalControlador(PrincipalModelo modelo, JframePrincipal vista) {
 		this.modelo = modelo;
 		this.vista = vista;
-		this.conexion = new Conexion();
+		this.conexion = new Conexion(modelo);
 		
 		inicializarControladores();
     }
@@ -53,9 +53,9 @@ public class PrincipalControlador {
     	controladorMenu = new controladorMenu(vista,this);
     	controladorMenuEmple = new controladorMenuEmple(vista, this);
     	// añadimos listeners a los botones del panel CrearUsuario
-    	controladorCrearUsuario = new controladorCrearUsuario(vista,this);
+    	controladorCrearUsuario = new controladorCrearUsuario(vista,this,modelo);
     	// añadimos listeners a los botones del panel ConsultarUsu
-    	controladorConsultarUsu = new controladorConsultarUsu(vista,this);
+    	controladorConsultarUsu = new controladorConsultarUsu(vista,this,modelo);
     	// añadimos listeners a los botones del panel ConsultarUsu
     	controladorMostrarUsu = new controladorMostrarUsu(vista,this);
     	

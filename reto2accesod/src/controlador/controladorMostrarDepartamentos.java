@@ -53,6 +53,7 @@ public class controladorMostrarDepartamentos {
 							vista.mostrarDepartamentos.lblBNombre.setText(Departamento1.get(i).getDnombre());
 							vista.mostrarDepartamentos.lblBLugar.setText(Departamento1.get(i).getLugar());
 							vista.mostrarDepartamentos.btnAnterior.setEnabled(true);
+
 							vista.mostrarDepartamentos.btnIrAlPrimero.setEnabled(true);
 
 							if(i==(Departamento1.size()-1)) {
@@ -63,7 +64,9 @@ public class controladorMostrarDepartamentos {
 							}
 						}else {
 							vista.mostrarDepartamentos.btnSiguiente.setEnabled(false);	
+
 							vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
+
 
 						}
 						
@@ -79,12 +82,14 @@ public class controladorMostrarDepartamentos {
 							vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamento1.get(i).getCod_dept()));
 							vista.mostrarDepartamentos.lblBNombre.setText(Departamento1.get(i).getDnombre());
 							vista.mostrarDepartamentos.lblBLugar.setText(Departamento1.get(i).getLugar());
+
 							vista.mostrarDepartamentos.btnSiguiente.setEnabled(true);
 							vista.mostrarDepartamentos.btnIrAlltimo.setEnabled(true);
 
 						}else {
 							vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
 							vista.mostrarDepartamentos.btnIrAlltimo.setEnabled(false);
+
 
 						}
 					break;
@@ -123,6 +128,7 @@ public class controladorMostrarDepartamentos {
 						
 						vista.cardLayout.show(vista.contentPane, "9");
 					break;
+					
 					case "SALIR":
 						vista.verDepartamentos.rdbtnCodDepart.setSelected(false);
 						vista.verDepartamentos.rdbtnNombre.setSelected(false);

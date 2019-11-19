@@ -76,7 +76,9 @@ public class controladorCrearDepartamentos    {
 
 							Departamento.add(0, depart);
 							
-							
+
+							JOptionPane.showMessageDialog(vista, "Se ha guardado el departamento", botonPulsado, 1);
+
 							try {
 								consult.insertarDepartamentos(Departamento);
 								vista.crearDepartamentos.textField_2.setText(null);

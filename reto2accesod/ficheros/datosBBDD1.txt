@@ -1,0 +1,46 @@
+EMPLEADOS:
+
+***************** Empleado 1 *****************
+ID = 2
+NOMBRE = LANDER
+APELLIDO = CRACKASO
+SUELDO = 1340
+BOSS = 2
+CODIGO DEPARTAMENTO = 10
+JEFE = false
+PUESTO = Matematicas
+
+***************** Empleado 2 *****************
+ID = 13
+NOMBRE = Lander
+APELLIDO = 13
+SUELDO = 13333
+BOSS = 13
+CODIGO DEPARTAMENTO = 13
+JEFE = false
+PUESTO = 13
+
+-----------------------------------------------------------------
+
+DEPARTAMENTOS:
+
+***************** Departamento 1 *****************
+CODIGO DEPARTAMENTO = 10
+LUGAR = Erreka
+NOMBRE DEPARTAMENTO Infor
+***************** Departamento 2 *****************
+CODIGO DEPARTAMENTO = 13
+LUGAR = AAAA
+NOMBRE DEPARTAMENTO BBBB
+***************** Departamento 3 *****************
+CODIGO DEPARTAMENTO = 19
+LUGAR = Erreka
+NOMBRE DEPARTAMENTO Infor
+***************** Departamento 4 *****************
+CODIGO DEPARTAMENTO = 56
+LUGAR = Bilbo
+NOMBRE DEPARTAMENTO Infor
+***************** Departamento 5 *****************
+CODIGO DEPARTAMENTO = 59
+LUGAR = Bilbo
+NOMBRE DEPARTAMENTO Infor

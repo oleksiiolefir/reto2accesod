@@ -1,3 +1,4 @@
+
 Fecha: Mon Nov 18 13:21:13 CET 2019 *** La clase es : modelo.lectorTXT$2 *** El metodo es : lecturaTXT *** el motivo por el cual ocurre el  error: java.lang.NumberFormatException: For input string: "null1"
 Fecha: Mon Nov 18 13:21:14 CET 2019 *** La clase es : modelo.Consultas$8 *** El metodo es : insertarEmpleados *** el motivo por el cual ocurre el  error: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
 Fecha: Mon Nov 18 13:21:14 CET 2019 *** La clase es : modelo.Consultas$8 *** El metodo es : insertarEmpleados *** el motivo por el cual ocurre el  error: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
@@ -73,12 +74,48 @@ Mon Nov 18 13:24:34 CET 2019 modelo.Consultas$4 insertarDepartamentos mensaje :j
 2019-11-18 17:03:12 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
 2019-11-18 17:03:12 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
 2019-11-18 17:03:12 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 79979044236f85f82e2ff93d0ae55b4621e3b4cd
 2019-11-19 08:22:35 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
 2019-11-19 08:22:35 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
 2019-11-19 08:22:35 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
 2019-11-19 08:22:35 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
 2019-11-19 08:22:35 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+<<<<<<< HEAD
+=======
+2019-11-19 08:33:15 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
+2019-11-19 08:33:15 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
+2019-11-19 08:33:15 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
+2019-11-19 08:33:15 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
+2019-11-19 08:33:15 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+2019-11-19 09:07:47 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
+2019-11-19 09:07:47 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
+2019-11-19 09:07:47 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
+2019-11-19 09:07:47 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
+2019-11-19 09:07:47 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+2019-11-19 09:27:42 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
+2019-11-19 09:27:42 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
+2019-11-19 09:27:42 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
+2019-11-19 09:27:42 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
+2019-11-19 09:27:42 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+2019-11-19 09:29:35 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
+2019-11-19 09:29:35 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
+2019-11-19 09:29:35 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
+2019-11-19 09:29:35 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
+2019-11-19 09:29:35 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+2019-11-19 09:30:42 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
+2019-11-19 09:30:42 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
+2019-11-19 09:30:42 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
+2019-11-19 09:30:42 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
+2019-11-19 09:30:42 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+2019-11-19 09:32:01 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
+2019-11-19 09:32:01 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
+2019-11-19 09:32:01 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
+2019-11-19 09:32:01 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
+2019-11-19 09:32:01 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+>>>>>>> 79979044236f85f82e2ff93d0ae55b4621e3b4cd
 2019-11-19 08:29:40 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
 2019-11-19 08:29:40 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
 2019-11-19 08:29:40 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
@@ -139,133 +176,14 @@ Mon Nov 18 13:24:34 CET 2019 modelo.Consultas$4 insertarDepartamentos mensaje :j
 2019-11-19 08:48:43 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
 2019-11-19 08:48:43 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
 2019-11-19 08:48:43 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:11:50 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:11:50 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:11:50 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:11:50 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:11:50 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:14:17 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:14:17 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:14:17 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:14:17 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:14:17 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:14:35 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:14:35 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:14:35 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:14:35 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:14:35 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:15:18 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:15:18 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:15:18 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:15:18 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:15:18 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:21:03 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:21:03 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:21:03 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:21:03 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:21:03 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:21:41 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:21:41 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:21:41 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:21:41 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:21:41 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:22:36 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:22:36 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:22:36 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:22:36 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:22:36 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:23:14 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:23:14 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:23:14 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:23:14 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:23:14 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:23:50 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:23:50 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:23:50 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:23:50 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:23:50 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:25:23 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:25:23 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:25:23 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:25:23 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:25:23 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:25:53 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:25:53 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:25:53 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:25:53 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:25:53 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:27:10 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:27:10 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:27:10 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:27:10 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:27:10 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:29:24 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:29:24 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:29:24 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:29:24 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:29:24 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:31:44 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:31:44 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:31:44 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:31:44 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:31:44 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:32:35 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:32:35 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:32:35 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:32:35 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:32:35 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:33:12 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:33:12 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:33:12 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:33:12 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:33:12 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:33:32 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:33:32 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:33:32 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:33:32 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:33:32 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:34:13 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:34:13 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:34:13 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:34:13 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:34:13 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:34:40 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:34:40 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:34:40 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:34:40 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:34:40 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:35:14 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:35:14 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:35:14 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:35:14 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:35:14 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:37:04 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:37:04 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:37:04 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:37:05 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:37:05 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:37:34 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:37:34 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:37:34 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:37:34 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:37:34 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:39:11 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:39:11 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:39:11 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:39:11 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:39:11 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:45:08 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:45:08 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:45:08 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:45:08 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:45:08 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:45:49 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
-2019-11-19 09:45:49 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
-2019-11-19 09:45:49 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
-2019-11-19 09:45:49 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:45:49 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
-2019-11-19 09:48:48 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`reto2ad`.`empleado`, CONSTRAINT `departamento_ibfk_1` FOREIGN KEY (`COD_DEPT`) REFERENCES `departamento` (`COD_DEPT`))
-2019-11-19 09:49:24 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`reto2ad`.`empleado`, CONSTRAINT `departamento_ibfk_1` FOREIGN KEY (`COD_DEPT`) REFERENCES `departamento` (`COD_DEPT`))
-2019-11-19 09:50:22 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:51:23 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
-2019-11-19 09:51:50 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
+
+2019-11-19 09:56:37 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
+2019-11-19 09:56:37 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
+2019-11-19 09:56:37 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
+2019-11-19 09:56:37 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
+2019-11-19 09:56:37 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+2019-11-19 11:38:37 modelo.lectorTXT$2 lecturaTXT mensaje :java.lang.NumberFormatException: For input string: "null1"
+2019-11-19 11:38:37 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'PRIMARY'
+2019-11-19 11:38:37 modelo.Consultas$4 insertarDepartamentos mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '13' for key 'PRIMARY'
+2019-11-19 11:38:37 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'COD_DEPT'
+2019-11-19 11:38:37 modelo.Consultas$8 insertarEmpleados mensaje :java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'

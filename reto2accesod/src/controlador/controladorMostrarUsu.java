@@ -61,7 +61,7 @@ public class controladorMostrarUsu{
 								vista.mostrarUsuarios.btnIrAlltimo.setEnabled(false);
 							}
 						}else {
-							vista.mostrarUsuarios.btnSiguiente.setEnabled(false);							
+							vista.mostrarUsuarios.btnSiguiente.setEnabled(true);							
 						}
 						
 					break;	
@@ -129,6 +129,14 @@ public class controladorMostrarUsu{
 						vista.consultarUsuario.textCodEmple.setText(" ");
 						vista.consultarUsuario.textNombre.setText(" ");
 						vista.cardLayout.show(vista.contentPane, "2");
+						vista.consultarUsuario.textCodEmple.setText(null);
+						vista.consultarUsuario.textNombre.setText(null);
+						vista.mostrarUsuarios.lblBCod.setText(" ");
+						vista.mostrarUsuarios.lblBNombre.setText(" ");
+						vista.mostrarUsuarios.lblBApellid.setText(" ");
+						vista.mostrarUsuarios.lblBDepat.setText(" ");
+						vista.mostrarUsuarios.lblBCargo.setText(" ");
+						vista.mostrarUsuarios.lblBJefe.setText(" ");
 					break;
 				}
 				

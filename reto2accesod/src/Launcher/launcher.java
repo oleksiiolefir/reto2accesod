@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import controlador.PrincipalControlador;
-import javafx.scene.input.DataFormat;
 import modelo.Conexion;
 import modelo.Consultas;
 import modelo.Departamento;

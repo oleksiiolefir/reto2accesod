@@ -31,7 +31,7 @@ public class GenerarTXT {
 	            bw.write("DEPARTAMENTOS");
 	            bw.newLine();
 	            for(int i=0; i<Departamento.size(); i++) {
-	            	bw.write(Departamento.get(i).getCod_dept() + ";" + Departamento.get(i).getDnombre() + ";" + Departamento.get(i).getLugar() );
+	            	bw.write(Departamento.get(i).getCod_dept() + ";" + Departamento.get(i).getLugar()+";"+ Departamento.get(i).getDnombre() );
 	            	bw.newLine();
 	            }
 	            bw.close();

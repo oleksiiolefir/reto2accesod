@@ -89,10 +89,10 @@ public class CrearUsuario extends JPanel {
 		add(textJefe);
 		
 		btnAgregar = new JButton("GUARDAR");
-		btnAgregar.setBounds(351, 270, 89, 23);
+		btnAgregar.setBounds(326, 270, 114, 23);
 		add(btnAgregar);
 		
-		btnPrueba = new JButton("prueba");
+		btnPrueba = new JButton("ATRAS");
 		btnPrueba.setBounds(35, 271, 89, 23);
 		add(btnPrueba);
 		

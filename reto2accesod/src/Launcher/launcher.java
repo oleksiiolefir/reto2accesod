@@ -40,10 +40,10 @@ public class launcher {
 		departamentos=lecturaCSV.funcionesDeLectorCsv();
 
 		empleados = lectorTXT.lecturaTXT();	
-		
+		consult.insertarDepartamentos(departamentos);	
 		
 		consult.insertarEmpleados(empleados);
-		consult.insertarDepartamentos(departamentos);	
+		
 	}
 
 }

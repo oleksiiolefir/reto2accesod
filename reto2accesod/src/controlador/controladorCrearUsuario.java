@@ -58,7 +58,6 @@ public class controladorCrearUsuario{
 					for(int i=0; i<lista.size() ; i++) {
 						if(Integer.toString(lista.get(i).getId())==vista.crearUsuario.textCodEmple.getText()) {
 							contador++;
-							System.out.println("NO DEBERIA METERSE");
 						}
 					}
 					if(contador==0) {
@@ -81,7 +80,6 @@ public class controladorCrearUsuario{
 							empleados.add(0, emple);
 							
 							try {
-								System.out.println("SE METE EN EL TRY");
 								consult.insertarEmpleados(empleados);
 							} catch (SQLException e1) {
 								JOptionPane.showMessageDialog(null,"Error al guardar el empleado","Error",JOptionPane.INFORMATION_MESSAGE);
@@ -93,9 +91,24 @@ public class controladorCrearUsuario{
 						JOptionPane.showMessageDialog(null,"Ya existe un usuario con ese ID","Error",JOptionPane.INFORMATION_MESSAGE);
 					}				
 					
+					
+					vista.crearUsuario.textCodEmple.setText(null);
+					vista.crearUsuario.textNombre.setText(null);
+					vista.crearUsuario.textApellido.setText(null);
+					vista.crearUsuario.textSueldo.setText(null);
+					vista.crearUsuario.textDept.setText(null);
+					vista.crearUsuario.textCargo.setText(null);
+					vista.crearUsuario.textJefe.setText(null);
 					break;
-				case "prueba":
+				case "ATRAS":
 					vista.cardLayout.show(vista.contentPane, "2");
+					
+					vista.crearUsuario.textCodEmple.setText(null);
+					vista.crearUsuario.textNombre.setText(null);
+					vista.crearUsuario.textApellido.setText(null);
+					vista.crearUsuario.textSueldo.setText(null);
+					vista.crearUsuario.textDept.setText(null);
+					vista.crearUsuario.textCargo.setText(null);
 					break;
 				}
 			}

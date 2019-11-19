@@ -17,14 +17,17 @@ public class PrincipalControlador {
 
 	public controladorCrearDepartamentos controladorCrearDepartamentos;
 	public controladorDepartamentos controladorDepartamentos;
-	private controladorVerDepartamentos controladorVerDepartamentos;
+	public controladorVerDepartamentos controladorVerDepartamentos;
 	public controladorMenu  controladorMenu;
 	public controladorConsultarUsu controladorConsultarUsu;
+
 
     public controladorMenuEmple controladorMenuEmple;   
 
     public controladorMostrarUsu controladorMostrarUsu;
-    
+
+    public controladorMostrarDepartamentos controladorMostrarDepartamentos;
+
     /**
      * Constructor del PrincipalControlador
      * @param modelo
@@ -59,20 +62,11 @@ public class PrincipalControlador {
     	// añadimos listeners a los botones del panel ConsultarUsu
     	controladorMostrarUsu = new controladorMostrarUsu(vista,this);
     	
-    	
-    	
-    	/*this.controladorCrearDepartamentos = new controladorCrearDepartamentos();
-    	this.controladorCrearDepartamentos.addListeners();
-    	
-    	this.controladorDepartamentos = new controladorDepartamentos();
-    	this.controladorBienvenida.addListeners();
-    	
-    	this.controladorVerDepartamentos = new controladorVerDepartamentos();
-    	this.controladorVerDepartamentos.addListeners();
-    	*/
+    	controladorCrearDepartamentos = new controladorCrearDepartamentos(vista,this, modelo);
+    	controladorDepartamentos = new controladorDepartamentos(vista,this);
+    	controladorVerDepartamentos = new controladorVerDepartamentos(vista,this, modelo);
+    	controladorMostrarDepartamentos = new controladorMostrarDepartamentos(vista, null);
 
-    	
-    	
 
     }
 }

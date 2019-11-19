@@ -16,7 +16,7 @@ import java.sql.*;
 import java.sql.PreparedStatement;
 
 public class lecturaCSV {
-	public static Connection Conexión;
+	public static Connection Conexion;
 
 	
 	public static final String SEPARATOR=";";

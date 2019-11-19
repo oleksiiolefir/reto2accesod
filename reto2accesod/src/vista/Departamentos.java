@@ -11,26 +11,27 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.*;
 
-public class Departamentos extends JPanel  implements ActionListener {
-
+public class Departamentos extends JPanel   {
+	public JButton btnCrearDepart, btnConsultarDept, btnAtras;
 	/**
 	 * Create the panel.
 	 */
 	public Departamentos() {
 		setLayout(null);
 		
-		JButton btnNewButton = new JButton("Crear Departamentos");
-		btnNewButton.setBounds(111, 30, 192, 48);
-		add(btnNewButton);
+		btnCrearDepart = new JButton("Crear Nuevo Departamento");
+		btnCrearDepart.setBounds(146, 63, 160, 46);
+		add(btnCrearDepart);
+		btnCrearDepart.setVisible(true);
 		
-		JButton btnNewButton_1 = new JButton("Ver Departementos");
-		btnNewButton_1.setBounds(111, 159, 192, 48);
-		add(btnNewButton_1);
-
+		btnConsultarDept = new JButton("Consultar Departamentos");
+		btnConsultarDept.setBounds(146, 162, 160, 46);
+		add(btnConsultarDept);
+		btnConsultarDept.setVisible(true);
+		
+		btnAtras = new JButton("Atras");
+		btnAtras.setBounds(351, 266, 89, 23);
+		add(btnAtras);
+		btnAtras.setVisible(true);
 	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}}
+}

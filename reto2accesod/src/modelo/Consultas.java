@@ -28,9 +28,12 @@ public class Consultas {
 			    // abrimos una conexion
 			    connection = conexion.conectar();
 			    stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);	 
-			    // aÒadimos los valores a insertar
+			    // aÓÉùdimos los valores a insertar
+			    try {
 			    stmt.executeUpdate();
-			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
+			    }catch(SQLException e){
+			    	
+			    }// Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			} catch (SQLException e) {
 			    e.printStackTrace();
 			    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
@@ -79,11 +82,14 @@ public class Consultas {
 			    stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
 			    // preparamos la consulta INSERT
 			    
-			    // aÒadimos los valores a insertar
+			    // aÓÉùdimos los valores a insertar
+			    try {
 			    stmt.executeUpdate();
 			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
-			   
+			    }catch(SQLException e){
 
+			    	
+			    }
 			} catch (SQLException e) {
 			    e.printStackTrace();
 			    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName()); 	
@@ -122,7 +128,7 @@ public class Consultas {
 		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 		    rs = ps.executeQuery();	    
 		    
-		    // crea objetos Linea con los resultados y los aÒade a un arrayList
+		    // crea objetos Linea con los resultados y los aÓÉùde a un arrayList
 		    while (rs.next()) {	
 		    	emple = new Empleado();
 		    	emple.setId(rs.getInt(1));
@@ -167,7 +173,7 @@ public class Consultas {
 		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 		    rs = ps.executeQuery();	    
 		    
-		    // crea objetos Linea con los resultados y los aÒade a un arrayList
+		    // crea objetos Linea con los resultados y los aÓÉùde a un arrayList
 		    while (rs.next()) {	
 		    	emple = new Empleado();
 		    	emple.setId(rs.getInt(1));
@@ -209,7 +215,7 @@ public class Consultas {
 			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			    rs = ps.executeQuery();
 
-			    // crea objetos Linea con los resultados y los aÒade a un arrayList
+			    // crea objetos Linea con los resultados y los aÓÉùde a un arrayList
 			    while (rs.next()) {
 			    	lista[contador]=rs;
 			    	contador++;
@@ -244,7 +250,7 @@ public class Consultas {
 		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 		    rs = ps.executeQuery();	    
 		    
-		    // crea objetos Linea con los resultados y los aÒade a un arrayList
+		    // crea objetos Linea con los resultados y los aÓÉùde a un arrayList
 		    while (rs.next()) {	
 		    	emple = new Empleado();
 		    	emple.setId(rs.getInt(1));
@@ -289,7 +295,7 @@ public class Consultas {
 		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 		    rs = ps.executeQuery();	    
 		    
-		    // crea objetos Linea con los resultados y los aÒade a un arrayList
+		    // crea objetos Linea con los resultados y los aÓÉùde a un arrayList
 		    while (rs.next()) {	
 		    	Depart = new Departamento();
 		    	Depart.setCod_dept(rs.getInt(1));
@@ -328,7 +334,7 @@ public class Consultas {
 		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 		    rs = ps.executeQuery();	    
 		    
-		    // crea objetos Linea con los resultados y los aÒade a un arrayList
+		    // crea objetos Linea con los resultados y los aÓÉùde a un arrayList
 		    while (rs.next()) {	
 		    	Depart = new Departamento();
 		    	Depart.setCod_dept(rs.getInt(1));
@@ -368,7 +374,7 @@ public class Consultas {
 		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 		    rs = ps.executeQuery();	    
 		    
-		    // crea objetos Linea con los resultados y los aÒade a un arrayList
+		    // crea objetos Linea con los resultados y los aÓÉùde a un arrayList
 		    while (rs.next()) {	
 		    	Depart = new Departamento();
 		    	Depart.setCod_dept(rs.getInt(1));
@@ -387,4 +393,5 @@ public class Consultas {
 		return Depard;
 	    }
 }
+
 	 

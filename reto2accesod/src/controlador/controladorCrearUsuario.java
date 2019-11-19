@@ -78,7 +78,7 @@ public class controladorCrearUsuario{
 							emple.setBoss(Integer.parseInt(vista.crearUsuario.textJefe.getText()));
 							
 							empleados.add(0, emple);
-							
+							JOptionPane.showMessageDialog(vista, "Se ha creado el usuario ", botonPulsado, 1);
 							try {
 								consult.insertarEmpleados(empleados);
 							} catch (SQLException e1) {

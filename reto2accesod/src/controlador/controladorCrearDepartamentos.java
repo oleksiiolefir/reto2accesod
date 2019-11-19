@@ -76,9 +76,12 @@ public class controladorCrearDepartamentos    {
 
 							Departamento.add(0, depart);
 							
-							
+							JOptionPane.showMessageDialog(vista, "Se ha guardado el departamento", botonPulsado, 1);
 							try {
 								consult.insertarDepartamentos(Departamento);
+								vista.crearDepartamentos.textField_2.setText(null);
+								vista.crearDepartamentos.textField_1.setText(null);
+								vista.crearDepartamentos.textField.setText(null);
 							} catch (SQLException e1) {
 								JOptionPane.showMessageDialog(null,"Error al guardar el Departamento","Error",JOptionPane.INFORMATION_MESSAGE);
 								e1.printStackTrace();
@@ -89,6 +92,10 @@ public class controladorCrearDepartamentos    {
 					break;
 					
 				case "atras":
+					vista.crearDepartamentos.textField_2.setText(null);
+					vista.crearDepartamentos.textField_1.setText(null);
+					vista.crearDepartamentos.textField.setText(null);
+					Departamento.clear();
 					vista.cardLayout.show(vista.contentPane, "8");
 					break;
 					

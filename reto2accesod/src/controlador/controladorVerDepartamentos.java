@@ -76,6 +76,23 @@ public class controladorVerDepartamentos {
 	    			}else {
 	    				Departamento=modelo.consultas.compararDepartTodo();
 	    			}
+					if(Departamento.size()==1) {
+						vista.mostrarDepartamentos.btnSiguiente.setEnabled(false);
+						vista.mostrarDepartamentos.btnIrAlPrimero.setEnabled(false);
+						vista.mostrarDepartamentos.btnIrAlltimo.setEnabled(false);
+			
+						vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
+						
+						
+					}else {
+						
+						vista.mostrarDepartamentos.btnSiguiente.setEnabled(true);
+						vista.mostrarDepartamentos.btnIrAlPrimero.setEnabled(false);
+						vista.mostrarDepartamentos.btnIrAlltimo.setEnabled(true);
+			
+						vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
+						
+					}
 					vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamento.get(0).getCod_dept()));
 					vista.mostrarDepartamentos.lblBNombre.setText(Departamento.get(0).getDnombre());
 					vista.mostrarDepartamentos.lblBLugar.setText(Departamento.get(0).getLugar());
@@ -85,7 +102,6 @@ public class controladorVerDepartamentos {
 				
 				break;
 				case "ATRAS":
-				
 					vista.cardLayout.show(vista.contentPane, "8");
 				break;
 				}

@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
-
+import javax.swing.JOptionPane;
 
 import modelo.Conexion;
 import modelo.Consultas;
@@ -64,6 +64,7 @@ public class controladorMenu{
 					ListaBBDD=consult.compararTodo();
 					Departamento1=consult.compararDepartTodo();
 					GenerarTXT.GenerarTXT(ListaBBDD, Departamento1);
+					JOptionPane.showMessageDialog(vista, "Se ha generado el informe de la información ", botonPulsado, 1);
 				break;
 				}
 			}

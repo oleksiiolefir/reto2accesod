@@ -19,7 +19,7 @@ public class MostrarDepartamentos extends JPanel{
 		setLayout(null);
 		
 		lbCodDepart = new JLabel("Codigo de Departamento: ");
-		lbCodDepart.setBounds(25, 30, 137, 19);
+		lbCodDepart.setBounds(25, 30, 161, 19);
 		add(lbCodDepart);
 		
 		lbNombre = new JLabel("Nombre: ");
@@ -43,27 +43,27 @@ public class MostrarDepartamentos extends JPanel{
 		add(lblBLugar);
 		
 		btnSiguiente = new JButton("SIGUIENTE");
-		btnSiguiente.setBounds(245, 191, 164, 30);
+		btnSiguiente.setBounds(232, 191, 185, 30);
 		add(btnSiguiente);
 		
 		btnAnterior = new JButton("ANTERIOR");
-		btnAnterior.setBounds(24, 191, 156, 30);
+		btnAnterior.setBounds(24, 191, 186, 30);
 		add(btnAnterior);
 		
 		btnIrAlPrimero = new JButton("Ir al primer Departamento");
-		btnIrAlPrimero.setBounds(27, 229, 154, 23);
+		btnIrAlPrimero.setBounds(27, 229, 183, 23);
 		add(btnIrAlPrimero);
 		
 		btnIrAlltimo = new JButton("Ir al ultimo Departamento");
-		btnIrAlltimo.setBounds(245, 229, 163, 21);
+		btnIrAlltimo.setBounds(231, 229, 186, 21);
 		add(btnIrAlltimo);
 		
 		btnSalir = new JButton("SALIR");
-		btnSalir.setBounds(245, 266, 164, 23);
+		btnSalir.setBounds(232, 266, 185, 23);
 		add(btnSalir);
 		
 		btnAtras = new JButton("ATRAS");
-		btnAtras.setBounds(22, 266, 156, 23);
+		btnAtras.setBounds(22, 266, 188, 23);
 		add(btnAtras);
 	
 	}}

@@ -57,16 +57,20 @@ public class Consultas {
 	
 	public void insertarEmpleados(ArrayList<Empleado> emple) throws SQLException {
 		  for (int i = 0; i < emple.size(); ++i) {					    
-			    
-		   
-			PreparedStatement stmt = null;
-			
-			
+	   
+			int jefe=0;
+			PreparedStatement stmt = null;						
 			String query;
+				
+			if( emple.get(i).getJefe()==true) {
+				jefe=1;				
+			}else {
+				jefe=0;
+			}
 			
 			query = "INSERT INTO empleado (ID, NOMBRE, APELLIDOS, SUELDO, BOSS,COD_DEPT,JEFE, PUESTO) VALUES ('"+emple.get(i).getId()+"','"+emple.get(i).getNombre()+"',"
 					+ "'"+emple.get(i).getApellido()+"', '"+emple.get(i).getSueldo()+"','"+ emple.get(i).getBoss()+"', '"+ emple.get(i).getCod_dept()+"',"
-							+ "'"+ 0+"', '"+ emple.get(i).getPuesto()+"')";
+							+ "'"+ jefe +"', '"+ emple.get(i).getPuesto()+"')";
 	
 			try {
 

@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 import modelo.Conexion;
 import modelo.Consultas;
@@ -57,8 +58,7 @@ public class controladorVerDepartamentos {
 				String botonPulsado = ((JButton) sourceObject).getActionCommand();
 
 				switch(botonPulsado) {
-				case "BUSCAR DEPARTAMENTO":
-					vista.cardLayout.show(vista.contentPane, "10");
+				case "BUSCAR DEPARTAMENTO":					
 					if(vista.verDepartamentos.rdbtnCodDepart.isSelected()) {
 						Departamento=modelo.consultas.compararDepart(vista.verDepartamentos.textCodDepart.getText());
 	    				for(int n=0; n<Departamento.size() ; n++) {	    						
@@ -93,16 +93,24 @@ public class controladorVerDepartamentos {
 						vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
 						
 					}
-					vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamento.get(0).getCod_dept()));
-					vista.mostrarDepartamentos.lblBNombre.setText(Departamento.get(0).getDnombre());
-					vista.mostrarDepartamentos.lblBLugar.setText(Departamento.get(0).getLugar());
-					
-					vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
-					vista.cardLayout.show(vista.contentPane, "10");
+					if(Departamento.size()==0) {	                		
+                		JOptionPane.showMessageDialog(vista, "No existe ningun departamento con esos parametros ", botonPulsado, 1);
+                	}else {
+						vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamento.get(0).getCod_dept()));
+						vista.mostrarDepartamentos.lblBNombre.setText(Departamento.get(0).getDnombre());
+						vista.mostrarDepartamentos.lblBLugar.setText(Departamento.get(0).getLugar());
+						
+						vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
+						vista.cardLayout.show(vista.contentPane, "10");
+                	}
 				
 				break;
 				case "ATRAS":
 					vista.cardLayout.show(vista.contentPane, "8");
+					vista.verDepartamentos.textCodDepart.setText("");
+					vista.verDepartamentos.textNombre.setText("");
+					vista.verDepartamentos.rdbtnCodDepart.setSelected(false);
+					vista.verDepartamentos.rdbtnNombre.setSelected(false);
 				break;
 				}
 			

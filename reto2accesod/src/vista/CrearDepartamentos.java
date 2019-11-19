@@ -22,7 +22,7 @@ public CrearDepartamentos() {
 	setLayout(null);
 	
 	JLabel label = new JLabel("Codigo de Departamento: ");
-	label.setBounds(25, 30, 137, 19);
+	label.setBounds(25, 30, 175, 19);
 	add(label);
 	
 	JLabel label_1 = new JLabel("Lugar: ");
@@ -38,7 +38,7 @@ public CrearDepartamentos() {
 	textField.setBounds(260, 29, 120, 19);
 	add(textField);
 	
-	 textField_1 = new JTextField("1");
+	 textField_1 = new JTextField("");
 	textField_1.setColumns(10);
 	textField_1.setBounds(260, 59, 120, 19);
 	add(textField_1);

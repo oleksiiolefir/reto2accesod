@@ -40,7 +40,7 @@ public class verDepartamentos extends JPanel {
 		add(btnAtras);
 		
 		btnBuscar = new JButton("BUSCAR DEPARTAMENTO");
-		btnBuscar.setBounds(132, 202, 153, 34);
+		btnBuscar.setBounds(125, 202, 192, 34);
 		add(btnBuscar);
 		
 		lblFiltrar = new JLabel("Filtrar por:");
@@ -48,7 +48,7 @@ public class verDepartamentos extends JPanel {
 		add(lblFiltrar);
 		
 		rdbtnCodDepart = new JRadioButton("Codigo de departamento ");
-		rdbtnCodDepart.setBounds(6, 116, 157, 23);
+		rdbtnCodDepart.setBounds(6, 116, 169, 23);
 		add(rdbtnCodDepart);
 		
 		rdbtnNombre = new JRadioButton("Nombre");

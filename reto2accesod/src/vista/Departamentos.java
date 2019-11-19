@@ -20,12 +20,12 @@ public class Departamentos extends JPanel   {
 		setLayout(null);
 		
 		btnCrearDepart = new JButton("Crear Nuevo Departamento");
-		btnCrearDepart.setBounds(146, 63, 160, 46);
+		btnCrearDepart.setBounds(100, 63, 206, 46);
 		add(btnCrearDepart);
 		btnCrearDepart.setVisible(true);
 		
 		btnConsultarDept = new JButton("Consultar Departamentos");
-		btnConsultarDept.setBounds(146, 162, 160, 46);
+		btnConsultarDept.setBounds(100, 162, 206, 46);
 		add(btnConsultarDept);
 		btnConsultarDept.setVisible(true);
 		

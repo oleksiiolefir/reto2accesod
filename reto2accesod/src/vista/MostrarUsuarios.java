@@ -32,7 +32,7 @@ public class MostrarUsuarios extends JPanel{
 		add(lbApellido);
 		
 		lbDept = new JLabel("Departamento del empleado: ");
-		lbDept.setBounds(25, 101, 153, 19);
+		lbDept.setBounds(25, 101, 164, 19);
 		add(lbDept);
 		
 		lbCargo = new JLabel("Cargo del empleado: ");
@@ -72,11 +72,11 @@ public class MostrarUsuarios extends JPanel{
 		add(btnSiguiente);
 		
 		btnAnterior = new JButton("ANTERIOR");
-		btnAnterior.setBounds(24, 191, 156, 30);
+		btnAnterior.setBounds(24, 191, 165, 30);
 		add(btnAnterior);
 		
 		btnIrAlPrimero = new JButton("Ir al primer empleado");
-		btnIrAlPrimero.setBounds(27, 229, 154, 23);
+		btnIrAlPrimero.setBounds(27, 229, 162, 23);
 		add(btnIrAlPrimero);
 		
 		btnIrAlltimo = new JButton("Ir al ultimo empleado");
@@ -88,7 +88,7 @@ public class MostrarUsuarios extends JPanel{
 		add(btnSalir);
 		
 		btnAtras = new JButton("ATRAS");
-		btnAtras.setBounds(22, 266, 156, 23);
+		btnAtras.setBounds(22, 266, 167, 23);
 		add(btnAtras);
 	
 	}

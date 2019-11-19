@@ -38,7 +38,7 @@ public class CrearUsuario extends JPanel {
 		add(lbSueldo);
 		
 		lbDept = new JLabel("Departamento del empleado: ");
-		lbDept.setBounds(25, 150, 153, 19);
+		lbDept.setBounds(25, 150, 180, 19);
 		add(lbDept);
 		
 		lbCargo = new JLabel("Cargo del empleado: ");
@@ -46,7 +46,7 @@ public class CrearUsuario extends JPanel {
 		add(lbCargo);
 		
 		lbConCargo = new JLabel("\u00BFTiene a alguien a cargo? (Si/No)");
-		lbConCargo.setBounds(25, 210, 164, 19);
+		lbConCargo.setBounds(25, 210, 195, 19);
 		add(lbConCargo);
 		
 		lbJefe = new JLabel("Jefe asignado: ");

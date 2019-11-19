@@ -11,14 +11,24 @@ JEFE = false
 PUESTO = Matematicas
 
 ***************** Empleado 2 *****************
-ID = 13
-NOMBRE = Lander
-APELLIDO = 13
-SUELDO = 13333
-BOSS = 13
-CODIGO DEPARTAMENTO = 13
+ID = 5
+NOMBRE = ALOSHA
+APELLIDO = CRACKASO
+SUELDO = 1340
+BOSS = 2
+CODIGO DEPARTAMENTO = 10
 JEFE = false
-PUESTO = 13
+PUESTO = Matematicas
+
+***************** Empleado 3 *****************
+ID = 24
+NOMBRE = sio
+APELLIDO = dfg
+SUELDO = 1220
+BOSS = 2
+CODIGO DEPARTAMENTO = 10
+JEFE = false
+PUESTO = xvb
 
 -----------------------------------------------------------------
 
@@ -32,15 +42,3 @@ NOMBRE DEPARTAMENTO Infor
 CODIGO DEPARTAMENTO = 13
 LUGAR = AAAA
 NOMBRE DEPARTAMENTO BBBB
-***************** Departamento 3 *****************
-CODIGO DEPARTAMENTO = 19
-LUGAR = Erreka
-NOMBRE DEPARTAMENTO Infor
-***************** Departamento 4 *****************
-CODIGO DEPARTAMENTO = 56
-LUGAR = Bilbo
-NOMBRE DEPARTAMENTO Infor
-***************** Departamento 5 *****************
-CODIGO DEPARTAMENTO = 59
-LUGAR = Bilbo
-NOMBRE DEPARTAMENTO Infor

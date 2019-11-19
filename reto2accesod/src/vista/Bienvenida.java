@@ -9,7 +9,6 @@ import javax.swing.JLabel;
 public class Bienvenida extends JPanel {	
 
 	public JButton btnBienvenida;
-	public JLabel lblAaaaa;
 	
 
 	public Bienvenida() {
@@ -20,9 +19,7 @@ public class Bienvenida extends JPanel {
 		btnBienvenida.setActionCommand("bienvenida");
 		add(btnBienvenida);
 		
-		lblAaaaa = new JLabel("AAAAA");
-		lblAaaaa.setBounds(163, 214, 46, 14);
-		add(lblAaaaa);
+	
 	}	
 }
 	

@@ -28,7 +28,6 @@ private class BotonListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
 		String botonPulsado = e.getActionCommand();
 		switch (botonPulsado) {
 		case "Crear Nuevo Departamento":
@@ -37,9 +36,9 @@ private class BotonListener implements ActionListener {
 		case "Consultar Departamentos":
 			vista.cardLayout.show(vista.contentPane, "9");
 			break;
-
+		
 		case "Atras":
-			vista.cardLayout.show(vista.contentPane, "8");
+			vista.cardLayout.show(vista.contentPane, "2");
 			break;
 		}
 	}

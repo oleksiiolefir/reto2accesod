@@ -10,10 +10,9 @@ import modelo.Departamento;
 import vista.JframePrincipal;
 
 public class controladorMostrarDepartamentos {
-	private JframePrincipal vista;
-	private PrincipalControlador controlador;
+	public JframePrincipal vista;
+	public PrincipalControlador controlador;
 	int i=0;
-	
 	public controladorMostrarDepartamentos(JframePrincipal vista, PrincipalControlador controlador) {
 		this.vista = vista;
 		this.controlador = controlador;
@@ -26,34 +25,38 @@ public class controladorMostrarDepartamentos {
 	public void initListeners() {
 		vista.mostrarDepartamentos.btnAnterior.addActionListener(new BotonListener());
 		vista.mostrarDepartamentos.btnSiguiente.addActionListener(new BotonListener());
+		vista.mostrarDepartamentos.btnIrAlPrimero.addActionListener(new BotonListener());
+		vista.mostrarDepartamentos.btnIrAlltimo.addActionListener(new BotonListener());
+		vista.mostrarDepartamentos.btnSalir.addActionListener(new BotonListener());
+		vista.mostrarDepartamentos.btnAtras.addActionListener(new BotonListener());
 	}
 	
-	private class BotonListener implements ActionListener {
+	public class BotonListener implements ActionListener {
 
 		@Override	
 		public void actionPerformed(ActionEvent e) {
 			
 			Object sourceObject = e.getSource();
-			ArrayList<Departamento> Departamentos = new ArrayList<Departamento>();
-			System.out.println((Departamentos.get(0).getLugar()));
-			System.out.println("hola");
-				Departamentos = controlador.controladorVerDepartamentos.lista;
+			ArrayList<Departamento> Departamento1 = new ArrayList<Departamento>();
+			Departamento1=controladorVerDepartamentos.caña();
 
-			if (sourceObject instanceof JButton) {
 			
+			
+			if (sourceObject instanceof JButton) {
+				
 				String botonPulsado = ((JButton) sourceObject).getActionCommand();
 				switch(botonPulsado) {
 					case "SIGUIENTE":
-					
-						if(i<(Departamentos.size()-1) ) {
-							System.out.println(i);
+						if(i<(Departamento1.size()-1) ) {
 							i++;	
-							vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamentos.get(i).getCod_dept()));
-							vista.mostrarDepartamentos.lblBNombre.setText(Departamentos.get(i).getDnombre());
-							vista.mostrarDepartamentos.lblBLugar.setText(Departamentos.get(i).getLugar());
+							vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamento1.get(i).getCod_dept()));
+							vista.mostrarDepartamentos.lblBNombre.setText(Departamento1.get(i).getDnombre());
+							vista.mostrarDepartamentos.lblBLugar.setText(Departamento1.get(i).getLugar());
 							
-							if(i==(Departamentos.size()-1)) {
+							if(i==(Departamento1.size()-1)) {
 								vista.mostrarDepartamentos.btnSiguiente.setEnabled(false);	
+								vista.mostrarDepartamentos.btnIrAlPrimero.setEnabled(true);
+								vista.mostrarDepartamentos.btnIrAlltimo.setEnabled(false);
 							}
 						}else {
 							vista.mostrarDepartamentos.btnSiguiente.setEnabled(false);							
@@ -65,16 +68,60 @@ public class controladorMostrarDepartamentos {
 							i--;
 							if(i==0) {
 								vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
+								vista.mostrarDepartamentos.btnIrAlPrimero.setEnabled(false);
+								vista.mostrarDepartamentos.btnIrAlltimo.setEnabled(true);
 							}
-							vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamentos.get(i).getCod_dept()));
-							vista.mostrarDepartamentos.lblBNombre.setText(Departamentos.get(i).getDnombre());
-							vista.mostrarDepartamentos.lblBLugar.setText(Departamentos.get(i).getLugar());
-						
+							vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamento1.get(i).getCod_dept()));
+							vista.mostrarDepartamentos.lblBNombre.setText(Departamento1.get(i).getDnombre());
+							vista.mostrarDepartamentos.lblBLugar.setText(Departamento1.get(i).getLugar());
 							vista.mostrarDepartamentos.btnSiguiente.setEnabled(true);						
 						}else {
 							vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
 						}
-					break;	
+					break;
+					case "Ir al primer Departamento":
+						i=0;
+						vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamento1.get(i).getCod_dept()));
+						vista.mostrarDepartamentos.lblBNombre.setText(Departamento1.get(i).getDnombre());
+						vista.mostrarDepartamentos.lblBLugar.setText(Departamento1.get(i).getLugar());
+						vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
+						vista.mostrarDepartamentos.btnSiguiente.setEnabled(true);
+						vista.mostrarDepartamentos.btnIrAlPrimero.setEnabled(false);
+						vista.mostrarDepartamentos.btnIrAlltimo.setEnabled(true);
+					break;
+					case "Ir al ultimo Departamento":
+						i=Departamento1.size()-1;
+						vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamento1.get(i).getCod_dept()));
+						vista.mostrarDepartamentos.lblBNombre.setText(Departamento1.get(i).getDnombre());
+						vista.mostrarDepartamentos.lblBLugar.setText(Departamento1.get(i).getLugar());
+						vista.mostrarDepartamentos.btnSiguiente.setEnabled(false);
+						vista.mostrarDepartamentos.btnAnterior.setEnabled(true);
+						vista.mostrarDepartamentos.btnIrAlPrimero.setEnabled(true);
+						vista.mostrarDepartamentos.btnIrAlltimo.setEnabled(false);
+					break;
+					case "ATRAS":
+						vista.verDepartamentos.rdbtnCodDepart.setSelected(false);
+						vista.verDepartamentos.rdbtnNombre.setSelected(false);
+						
+						vista.verDepartamentos.textCodDepart.setText(null);
+						vista.verDepartamentos.textNombre.setText(null);
+						
+						
+						vista.mostrarDepartamentos.lblBCod.setText(" ");
+						vista.mostrarDepartamentos.lblBNombre.setText(" ");
+						vista.mostrarDepartamentos.lblBLugar.setText(" ");
+						Departamento1.clear();
+						
+						vista.cardLayout.show(vista.contentPane, "9");
+					break;
+					case "SALIR":
+						vista.verDepartamentos.rdbtnCodDepart.setSelected(false);
+						vista.verDepartamentos.rdbtnNombre.setSelected(false);
+						vista.verDepartamentos.textCodDepart.setText(" ");
+						vista.verDepartamentos.textNombre.setText(" ");
+						vista.cardLayout.show(vista.contentPane, "2");
+						Departamento1.clear();
+						break;
 				}
 				
 			}

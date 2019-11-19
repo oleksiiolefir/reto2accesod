@@ -15,11 +15,9 @@ import vista.JframePrincipal;
 public class controladorConsultarUsu{
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
-
 	private PrincipalModelo modelo;
 	ArrayList<Empleado>lista=new ArrayList<Empleado>();
 	
-
 	public controladorConsultarUsu(JframePrincipal vista, PrincipalControlador controlador,PrincipalModelo modelo) {
 		this.vista = vista;
 		this.controlador = controlador;
@@ -50,7 +48,6 @@ public class controladorConsultarUsu{
 				case "BUSCAR EMPLEADO":
 					vista.cardLayout.show(vista.contentPane, "7");
 					if(vista.consultarUsuario.rdbtnCodEmple.isSelected()) {
-						System.out.println("sOY UN ID QUE EXISTE");
 	                	lista=modelo.consultas.comparar(vista.consultarUsuario.textCodEmple.getText());
 	    				for(int n=0; n<lista.size() ; n++) {	    						
 	    					vista.consultarUsuario.rdbtnNombre.setSelected(false);
@@ -60,13 +57,29 @@ public class controladorConsultarUsu{
 	    				lista=modelo.consultas.compararNombre(vista.consultarUsuario.textNombre.getText());
 	    				for(int n=0; n<lista.size() ; n++) {
 	    					if(lista.get(n).getNombre()==vista.consultarUsuario.textNombre.getText()) {
-
 	    						vista.consultarUsuario.rdbtnCodEmple.setSelected(false);
 	    					}
 	    				}	
 	    			}else {
 	    				lista=modelo.consultas.compararTodo();
 	    			}
+					if(lista.size()==1) {
+						vista.mostrarUsuarios.btnSiguiente.setEnabled(false);
+						vista.mostrarUsuarios.btnIrAlPrimero.setEnabled(false);
+						vista.mostrarUsuarios.btnIrAlltimo.setEnabled(false);
+			
+						vista.mostrarUsuarios.btnAnterior.setEnabled(false);
+						
+						
+					}else {
+						
+						vista.mostrarUsuarios.btnSiguiente.setEnabled(true);
+						vista.mostrarUsuarios.btnIrAlPrimero.setEnabled(false);
+						vista.mostrarUsuarios.btnIrAlltimo.setEnabled(true);
+			
+						vista.mostrarUsuarios.btnAnterior.setEnabled(false);
+						
+					}
 					vista.mostrarUsuarios.lblBCod.setText(Integer.toString(lista.get(0).getId()));
 					vista.mostrarUsuarios.lblBNombre.setText(lista.get(0).getNombre());
 					vista.mostrarUsuarios.lblBApellid.setText(lista.get(0).getApellido());
@@ -74,6 +87,7 @@ public class controladorConsultarUsu{
 					vista.mostrarUsuarios.lblBCargo.setText(lista.get(0).getPuesto());
 					vista.mostrarUsuarios.lblBJefe.setText(Integer.toString(lista.get(0).getBoss()));
 					vista.mostrarUsuarios.btnAnterior.setEnabled(false);
+					vista.mostrarUsuarios.btnIrAlPrimero.setEnabled(false);
 					vista.cardLayout.show(vista.contentPane, "7");
 				break;
 				case "ATRAS":

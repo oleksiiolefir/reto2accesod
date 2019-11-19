@@ -9,14 +9,13 @@ public class PrincipalModelo {
 	public Empleado empleado;
 	public EscrituraLog escrituraLog;
 	public comprobador comprobador;
+	public GenerarTXT generarTXT;
 	
 	
 	public PrincipalModelo() {
-
 		
 		// creamos un objeto BBDD que se encargara de conectarse a la BBDD
 		conexion = new Conexion(this);
-
 			
 		// Creamos un objeto Consultas que se encargara de hacer consultas a la BBDD
 		consultas = new Consultas(conexion);

@@ -4,18 +4,15 @@ public class Departamento {
 	private int cod_dept;
 	private String lugar;
 	private String dnombre;
-
+	public Departamento() {
+		
+	}
 	public Departamento(int cod_dept, String lugar, String dnombre) {		
 		super();
 		this.cod_dept = cod_dept;
 		this.lugar = lugar;
 		this.dnombre = dnombre;
 	}
-	
-	public Departamento() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public int getCod_dept() {
 		return cod_dept;
 	}

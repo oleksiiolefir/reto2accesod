@@ -14,15 +14,17 @@ import vista.Departamentos;
 import vista.JframePrincipal;
 
 public class controladorVerDepartamentos {
+	
 	private JframePrincipal vista;
 	private PrincipalControlador controlador;
-	ArrayList<Departamento> lista=new ArrayList<Departamento>();
 	private PrincipalModelo modelo;
-
-	public controladorVerDepartamentos(JframePrincipal vista, PrincipalControlador controlador) {
+	public static ArrayList<Departamento> Departamento=new ArrayList<Departamento>();
+	
+	public controladorVerDepartamentos(JframePrincipal vista, PrincipalControlador controlador,PrincipalModelo modelo) {
 		this.vista = vista;
 		this.controlador = controlador;
-		
+		this.modelo = modelo;
+
 		initListeners();
 	}
 	
@@ -32,15 +34,23 @@ public class controladorVerDepartamentos {
 	public void initListeners() {
 		vista.verDepartamentos.btnAtras.addActionListener(new BotonListener());
 		vista.verDepartamentos.btnBuscar.addActionListener(new BotonListener());
+		
+	}	
+	public static ArrayList<Departamento> caña() {
+		 ArrayList<Departamento> Departamento1=new ArrayList<Departamento>();
+		 Departamento1=Departamento;
+		return Departamento1;
+		
+		
 	}	
 
-	private class BotonListener implements ActionListener {
+	public class BotonListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
 			Object sourceObject = e.getSource();
-		
+			
 
 			if (sourceObject instanceof JButton) {
 				
@@ -50,30 +60,32 @@ public class controladorVerDepartamentos {
 				case "BUSCAR DEPARTAMENTO":
 					vista.cardLayout.show(vista.contentPane, "10");
 					if(vista.verDepartamentos.rdbtnCodDepart.isSelected()) {
-						System.out.println("SOY UN ID QUE EXISTE");
-	                	lista=modelo.consultas.compararDepart(vista.verDepartamentos.textCodDepart.getText());
-	    				for(int n=0; n<lista.size() ; n++) {	    						
+						Departamento=modelo.consultas.compararDepart(vista.verDepartamentos.textCodDepart.getText());
+	    				for(int n=0; n<Departamento.size() ; n++) {	    						
 	    					vista.verDepartamentos.rdbtnNombre.setSelected(false);
 	    				}
 					}
 	    			else if(vista.verDepartamentos.rdbtnNombre.isSelected()) {
-	    				lista=modelo.consultas.compararDepartNombre(vista.verDepartamentos.textNombre.getText());
-	    				for(int n=0; n<lista.size() ; n++) {
-	    					if(lista.get(n).getDnombre()==vista.verDepartamentos.textNombre.getText()) {
+	    				Departamento=modelo.consultas.compararDepartNombre(vista.verDepartamentos.textNombre.getText());
+	    				for(int n=0; n<Departamento.size() ; n++) {
+	    					if(Departamento.get(n).getDnombre()==vista.verDepartamentos.textNombre.getText()) {
 
 	    						vista.verDepartamentos.rdbtnCodDepart.setSelected(false);
 	    					}
 	    				}	
 	    			}else {
-	    				lista=modelo.consultas.compararDepartTodo();
+	    				Departamento=modelo.consultas.compararDepartTodo();
 	    			}
-					vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(lista.get(0).getCod_dept()));
-					vista.mostrarDepartamentos.lblBNombre.setText(lista.get(0).getDnombre());
-					vista.mostrarDepartamentos.lblBLugar.setText(lista.get(0).getLugar());
+					vista.mostrarDepartamentos.lblBCod.setText(Integer.toString(Departamento.get(0).getCod_dept()));
+					vista.mostrarDepartamentos.lblBNombre.setText(Departamento.get(0).getDnombre());
+					vista.mostrarDepartamentos.lblBLugar.setText(Departamento.get(0).getLugar());
+					
 					vista.mostrarDepartamentos.btnAnterior.setEnabled(false);
 					vista.cardLayout.show(vista.contentPane, "10");
+				
 				break;
 				case "ATRAS":
+				
 					vista.cardLayout.show(vista.contentPane, "8");
 				break;
 				}

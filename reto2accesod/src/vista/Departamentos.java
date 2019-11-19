@@ -1,10 +1,15 @@
 package vista;
 
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
-
+import javax.swing.JTextField;
 import javax.swing.JButton;
-
+import java.awt.event.*;
 
 public class Departamentos extends JPanel   {
 	public JButton btnCrearDepart, btnConsultarDept, btnAtras;

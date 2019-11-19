@@ -1,23 +1,13 @@
 package vista;
 
+import java.awt.EventQueue;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.lang.ModuleLayer.Controller;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
-import modelo.Conexion;
-
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-
-
-
 import javax.swing.JButton;
+
 
 public class CrearDepartamentos extends JPanel{
 	
@@ -68,11 +58,3 @@ public CrearDepartamentos() {
 }
 
 }
-		
-
-
-
-  
-    
-
-      

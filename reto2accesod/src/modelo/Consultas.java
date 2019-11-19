@@ -8,8 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 
-import vista.Departamentos;
-
 public class Consultas {
 
 	 private Conexion conexion;
@@ -99,123 +97,7 @@ public class Consultas {
 		  }
 		  connection.close();
 	 }
-	public ArrayList<Departamento> compararDepart(String variable) {
-		ArrayList<Departamento> Depard = new ArrayList<Departamento>();
-		Departamento Depart;
-
-		int contador = 0;
-
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		String query = "SELECT * FROM `departamento` WHERE COD_DEPT = '" + variable + "'";
-
-		try {
-		    // Abrimos una conexion
-		    connection = conexion.conectar();
-
-		    // preparamos la consulta SQL a la base de datos
-		    ps = connection.prepareStatement(query);
-
-		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
-		    rs = ps.executeQuery();	    
-		    
-		    // crea objetos Linea con los resultados y los añade a un arrayList
-		    while (rs.next()) {	
-		    	Depart = new Departamento();
-		    	Depart.setCod_dept(rs.getInt(1));
-		    	Depart.setLugar(rs.getString(3));
-		    	Depart.setDnombre(rs.getString(2));
-		    
-		    	Depard.add(Depart);
-		    }
-		} catch (SQLException e) {
-		    e.printStackTrace();
-		} finally {
-		    // cerramos la conexion
-		    conexion.desconectar();
-		}
-
-		return Depard;
-	    }
 	
-	public ArrayList<Departamento>  compararDepartNombre(String variable) {
-		ArrayList<Departamento> Depard = new ArrayList<Departamento>();
-		Departamento Depart;
-
-		int contador = 0;
-
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		String query = "SELECT * FROM `departamento` WHERE  DNOMBRE =  "  +  variable   ;
-//en el nombre hay que hacer que se lea entre comillas
-		try {
-		    // Abrimos una conexion
-		    connection = conexion.conectar();
-
-		    // preparamos la consulta SQL a la base de datos
-		    ps = connection.prepareStatement(query);
-
-		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
-		    rs = ps.executeQuery();	    
-		    
-		    // crea objetos Linea con los resultados y los añade a un arrayList
-		    while (rs.next()) {	
-		    	Depart = new Departamento();
-		    	Depart.setCod_dept(rs.getInt(1));
-		    	Depart.setLugar(rs.getString(3));
-		    	Depart.setDnombre(rs.getString(2));
-		    
-		    	Depard.add(Depart);
-		    }
-		} catch (SQLException e) {
-		    e.printStackTrace();
-		} finally {
-		    // cerramos la conexion
-		    conexion.desconectar();
-		}
-
-		return Depard;
-	    }
-	public ArrayList<Departamento> compararDepartTodo() {
-		ArrayList<Departamento> Depard = new ArrayList<Departamento>();
-		Departamento Depart;
-
-		int contador = 0;
-
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		String query = "SELECT * FROM `Departamento` ";
-
-		try {
-		    // Abrimos una conexion
-		    connection = conexion.conectar();
-
-		    // preparamos la consulta SQL a la base de datos
-		    ps = connection.prepareStatement(query);
-
-		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
-		    rs = ps.executeQuery();	    
-		    
-		    // crea objetos Linea con los resultados y los añade a un arrayList
-		    while (rs.next()) {	
-		    	Depart = new Departamento();
-		    	Depart.setCod_dept(rs.getInt(1));
-		    	Depart.setLugar(rs.getString(2));
-		    	Depart.setDnombre(rs.getString(3));
-		    
-		    	Depard.add(Depart);
-		}} catch (SQLException e) {
-		    e.printStackTrace();
-		} finally {
-		    // cerramos la conexion
-		    conexion.desconectar();
-		}
-
-		return Depard;
-	    }
-	
-	
-
 	public ArrayList<Empleado> comparar(String variable) {
 		ArrayList<Empleado> emplead = new ArrayList<Empleado>();
     	Empleado emple;
@@ -251,32 +133,25 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
-
 		    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
-
         	
-
 		} finally {
 		    // cerramos la conexion
 		    conexion.desconectar();
 		}
 
-
 		return emplead;
 	    }
-	
-	
 	
 	public ArrayList<Empleado> compararNombre(String variable) {
 		ArrayList<Empleado> emplead = new ArrayList<Empleado>();
     	Empleado emple;
 
-
 		int contador = 0;
 
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String query = "SELECT * FROM `empleado` WHERE  = NOMBRE '" + variable + "'";
+		String query = "SELECT * FROM `empleado` WHERE  NOMBRE  = '" + variable + "'";
 
 		try {
 		    // Abrimos una conexion
@@ -303,9 +178,8 @@ public class Consultas {
 		    }
 		} catch (SQLException e) {
 		    e.printStackTrace();
-   EscrituraLog.crearLog(e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+		    EscrituraLog.crearLog(e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
         	
-
 		} finally {
 		    // cerramos la conexion
 		    conexion.desconectar();
@@ -313,7 +187,39 @@ public class Consultas {
 
 		return emplead;
 	    }
-	
+	 public Object [] comparar1(String variable) {
+			Object [] lista=new Object[5];
+			int contador = 0;
+
+			PreparedStatement ps = null;
+			ResultSet rs = null;
+			String query = "SELECT " + variable + " FROM `empleado`";
+
+			try {
+			    // Abrimos una conexion
+			    connection = conexion.conectar();
+
+			    // preparamos la consulta SQL a la base de datos
+			    ps = connection.prepareStatement(query);
+
+			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
+			    rs = ps.executeQuery();
+
+			    // crea objetos Linea con los resultados y los añade a un arrayList
+			    while (rs.next()) {
+			    	lista[contador]=rs;
+			    	contador++;
+			    }
+			} catch (SQLException e) {
+			    e.printStackTrace();
+			} finally {
+			    // cerramos la conexion
+			    conexion.desconectar();
+			}
+
+			return lista;
+		    }
+
 	public ArrayList<Empleado> compararTodo() {
 		ArrayList<Empleado> emplead = new ArrayList<Empleado>();
     	Empleado emple;
@@ -357,6 +263,124 @@ public class Consultas {
 		}
 
 		return emplead;
+	    }
+	
+	public ArrayList<Departamento> compararDepartTodo() {
+		ArrayList<Departamento> Depard = new ArrayList<Departamento>();
+		Departamento Depart;
+
+		int contador = 0;
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String query = "SELECT * FROM `Departamento` ";
+
+		try {
+		    // Abrimos una conexion
+		    connection = conexion.conectar();
+
+		    // preparamos la consulta SQL a la base de datos
+		    ps = connection.prepareStatement(query);
+
+		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
+		    rs = ps.executeQuery();	    
+		    
+		    // crea objetos Linea con los resultados y los añade a un arrayList
+		    while (rs.next()) {	
+		    	Depart = new Departamento();
+		    	Depart.setCod_dept(rs.getInt(1));
+		    	Depart.setLugar(rs.getString(2));
+		    	Depart.setDnombre(rs.getString(3));
+		    
+		    	Depard.add(Depart);
+		}} catch (SQLException e) {
+		    e.printStackTrace();
+		} finally {
+		    // cerramos la conexion
+		    conexion.desconectar();
+		}
+
+		return Depard;
+	    }
+
+	
+	public ArrayList<Departamento> compararDepart(String variable) {
+		ArrayList<Departamento> Depard = new ArrayList<Departamento>();
+		Departamento Depart;
+
+		int contador = 0;
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String query = "SELECT * FROM `departamento` WHERE COD_DEPT = '" + variable + "'";
+
+		try {
+		    // Abrimos una conexion
+		    connection = conexion.conectar();
+
+		    // preparamos la consulta SQL a la base de datos
+		    ps = connection.prepareStatement(query);
+
+		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
+		    rs = ps.executeQuery();	    
+		    
+		    // crea objetos Linea con los resultados y los añade a un arrayList
+		    while (rs.next()) {	
+		    	Depart = new Departamento();
+		    	Depart.setCod_dept(rs.getInt(1));
+		    	Depart.setLugar(rs.getString(2));
+		    	Depart.setDnombre(rs.getString(3));
+		    
+		    	Depard.add(Depart);
+		    }
+		} catch (SQLException e) {
+		    e.printStackTrace();
+		} finally {
+		    // cerramos la conexion
+		    conexion.desconectar();
+		}
+
+		return Depard;
+	    }
+	
+	public ArrayList<Departamento>  compararDepartNombre(String variable) {
+		ArrayList<Departamento> Depard = new ArrayList<Departamento>();
+		Departamento Depart;
+
+		int contador = 0;
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
+		String query = "SELECT * FROM `departamento` WHERE  DNOMBRE = '" +  variable + "'";
+//en el nombre hay que hacer que se lea entre comillas
+		try {
+		    // Abrimos una conexion
+		    connection = conexion.conectar();
+
+		    // preparamos la consulta SQL a la base de datos
+		    ps = connection.prepareStatement(query);
+
+		    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
+		    rs = ps.executeQuery();	    
+		    
+		    // crea objetos Linea con los resultados y los añade a un arrayList
+		    while (rs.next()) {	
+		    	Depart = new Departamento();
+		    	Depart.setCod_dept(rs.getInt(1));
+		    	Depart.setLugar(rs.getString(2));
+		    	Depart.setDnombre(rs.getString(3));
+		    
+		    	Depard.add(Depart);
+		    }
+		} catch (SQLException e) {
+		    e.printStackTrace();
+		} finally {
+		    // cerramos la conexion
+		    conexion.desconectar();
+		}
+
+		return Depard;
 	    }
 }
 	 

@@ -32,6 +32,10 @@ public class Consultas {
 			    try {
 			    stmt.executeUpdate();
 			    }catch(SQLException e){
+			    
+				    e.printStackTrace();
+				    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
+			    	
 			    	
 			    }// Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			} catch (SQLException e) {
@@ -87,7 +91,8 @@ public class Consultas {
 			    stmt.executeUpdate();
 			    // Ejecuta la consulta y guarda los resultados en un objeto ResultSet
 			    }catch(SQLException e){
-
+				    e.printStackTrace();
+				    EscrituraLog.crearLog( e.toString(), new Object() {} .getClass().getEnclosingMethod().getName(), new Object() {} .getClass().getName());
 			    	
 			    }
 			} catch (SQLException e) {

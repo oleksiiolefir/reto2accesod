@@ -1,7 +1,10 @@
 EMPLEADOS
 2;LANDER;CRACKASO;1340;2;10;false;Matematicas
+3;ALOSHA;AAA;1200;2;10;false;AQUI
 5;ALOSHA;CRACKASO;1340;2;15;false;Matematicas
 -----------------------------------------------------------------------
 DEPARTAMENTOS
-10;Infor;Erreka
-13;BBBB;AAAA
+4;JJJ;TST
+10;Erreka;Infor
+11;AUI;Infor
+13;AAAA;BBBB
